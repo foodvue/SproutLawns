@@ -517,6 +517,16 @@ p {
   padding: var(--space-2xl) 0;
 }
 
+.hero__veteran-badge {
+  margin-bottom: var(--space-md);
+}
+
+.hero__veteran-badge img {
+  height: 140px;
+  width: auto;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
+}
+
 .hero__badge {
   display: inline-flex;
   align-items: center;
