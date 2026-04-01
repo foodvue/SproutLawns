@@ -1389,7 +1389,7 @@ p {
     gap: var(--space-lg);
   }
 
-  .hero { min-height: 70vh; }
+  .hero { min-height: calc(100vh - 80px); min-height: calc(100svh - 80px); }
 }
 
 /* Mobile */
@@ -1460,7 +1460,7 @@ p {
     text-align: center;
   }
 
-  .hero { min-height: 85vh; }
+  .hero { min-height: calc(100vh - 80px); min-height: calc(100svh - 80px); }
   .hero--interior { min-height: 300px; }
 
   .btn-group {
