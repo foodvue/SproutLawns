@@ -294,6 +294,76 @@
       "source": "/doorhanger-qr",
       "destination": "/doorhanger-qr/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/what-are-winterizer-treatments-are-they-even-necessary/",
+      "destination": "/blog/when-to-apply-winterizer-fertilizer-in-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/when-should-lawns-in-indiana-be-fertilized/",
+      "destination": "/blog/does-it-matter-how-much-fertilizer-you-use-for-your-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/has-brown-patch-infected-your-turf/",
+      "destination": "/blog/what-causes-brown-patches-in-your-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/what-type-of-grass-do-i-have-in-indiana/",
+      "destination": "/blog/how-to-choose-the-right-grass-seed-for-your-indiana-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/what-are-the-different-types-of-mulch/",
+      "destination": "/blog/best-types-of-mulch-for-indiana-landscape-beds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/5-ways-crabgrass-can-invade-your-lawn-in-indiana/",
+      "destination": "/blog/common-indiana-lawn-weeds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-do-lawn-care-companies-apply-liquid-fertilizer/",
+      "destination": "/blog/does-it-matter-how-much-fertilizer-you-use-for-your-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/5-benefits-of-hiring-a-professional-lawn-care-company/",
+      "destination": "/blog/benefits-of-hiring-a-local-lawn-care-company-vs-national-chain/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/what-is-aeration/",
+      "destination": "/blog/what-is-core-aeration-and-why-does-your-lawn-need-it/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/3-lawn-diseases-you-need-to-watch-out-for-in-noblesville/",
+      "destination": "/blog/4-lawn-diseases-that-can-invade-lawns-in-fishers-in/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/lawn-striping-101-how-to-stripe-a-lawn/",
+      "destination": "/blog/why-mowing-patterns-matter-more-than-you-think/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/preparing-your-lawn-for-fall-and-winter-in-indiana/",
+      "destination": "/blog/how-to-prepare-your-lawn-for-winter-in-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/what-is-the-best-indiana-lawn-care-schedule/",
+      "destination": "/blog/spring-lawn-care-checklist-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/the-ultimate-guide-to-landscape-trimming-and-pruning/",
+      "destination": "/blog/when-to-trim-and-prune-shrubs-in-indiana/",
+      "statusCode": 301
     }
   ]
 }
