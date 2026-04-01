@@ -575,9 +575,6 @@ p {
 .hero h1 .accent {
   color: var(--pink-light);
   text-shadow: 0 0 40px rgba(232, 74, 154, 0.3);
-  font-size: 0.72em;
-  display: block;
-  margin-top: 0.15em;
 }
 
 .hero__desc {
@@ -1045,7 +1042,7 @@ p {
 .footer {
   background: var(--green-dark);
   color: rgba(255,255,255,0.7);
-  padding-top: var(--space-2xl);
+  padding-top: 0;
   position: relative;
 }
 
@@ -1053,7 +1050,7 @@ p {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: -2px;
+  margin-bottom: var(--space-lg);
 }
 
 .footer__grid {
