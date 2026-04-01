@@ -1342,8 +1342,9 @@ p {
   }
 
   .nav__dropdown {
-    position: static;
-    transform: none;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
     background: rgba(255,255,255,0.05);
     box-shadow: none;
     border-radius: var(--radius);
@@ -1359,6 +1360,7 @@ p {
 
   .nav__item.open .nav__dropdown {
     max-height: 2000px;
+    transform: none !important;
   }
 
   .nav__dropdown a {
