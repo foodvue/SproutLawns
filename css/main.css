@@ -1498,3 +1498,24 @@ p {
   .hero { min-height: auto; padding: 2rem 0; }
   body { color: #000; background: #fff; }
 }
+
+/* ============================================
+   NAV SIZING UPDATE
+   ============================================ */
+
+/* Bigger logo */
+.nav__logo img {
+  height: 54px;
+}
+
+/* Bigger nav links */
+.nav__link {
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Slightly bigger dropdown links */
+.nav__dropdown a {
+  font-size: 0.9rem;
+  padding: 0.55rem 0.85rem;
+}
