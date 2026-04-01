@@ -1520,3 +1520,12 @@ p {
   font-size: 0.9rem;
   padding: 0.55rem 0.85rem;
 }
+
+/* Testimonial scroll - hide scrollbar but keep scroll */
+.testimonial-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.testimonial-scroll::-webkit-scrollbar {
+  display: none;
+}
