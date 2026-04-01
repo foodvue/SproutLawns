@@ -1,2 +1,4 @@
--e User-agent: *
-Disallow: /
+User-agent: *
+Allow: /
+
+Sitemap: https://www.sproutlawns.com/sitemap.xml
