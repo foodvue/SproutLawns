@@ -492,8 +492,8 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120vw;
-  height: 120vh;
+  width: max(120vw, 178vh);
+  height: max(120vh, 56.25vw);
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
