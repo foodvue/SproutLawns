@@ -82,29 +82,31 @@
     </div>
   </section>
 
-  <!-- INSTANT ESTIMATE -->
+  <!-- ESTIMATE FORMS - TABBED -->
   <section class="section">
     <div class="container">
-      <div class="text-center reveal" style="margin-bottom: var(--space-xl);">
-        <span class="section-label">Instant Pricing</span>
-        <h2>Get Your Price in Under 60 Seconds</h2>
-        <p style="max-width: 640px; margin-inline: auto;">Enter your address below and get instant pricing for lawn mowing, aeration &amp; seeding, or fertilization &amp; weed control. No phone call needed, no waiting for a callback.</p>
+      <div class="text-center" style="margin-bottom: var(--space-lg);">
+        <span class="section-label">Get an Estimate</span>
+        <h2>What Do You Need Help With?</h2>
+        <p style="max-width: 640px; margin-inline: auto;">Select your service type below. Mowing, aeration, and fertilization get instant satellite-measured pricing. Everything else goes through a quick work request form.</p>
       </div>
-      <div style="max-width: 800px; margin-inline: auto;">
+
+      <!-- TAB BUTTONS -->
+      <div style="display: flex; gap: 0; max-width: 800px; margin: 0 auto var(--space-lg);">
+        <button id="tab-instant" onclick="switchTab('instant')" style="flex: 1; padding: 1rem 1.5rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; border: 2px solid var(--green-deep); background: var(--green-deep); color: var(--white); border-radius: var(--radius) 0 0 var(--radius); transition: all 0.2s ease;">Mowing, Aeration &amp; Fertilization<br><span style="font-weight: 400; font-size: 0.82rem; opacity: 0.85;">Instant satellite pricing</span></button>
+        <button id="tab-other" onclick="switchTab('other')" style="flex: 1; padding: 1rem 1.5rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; border: 2px solid var(--green-deep); background: transparent; color: var(--green-deep); border-radius: 0 var(--radius) var(--radius) 0; transition: all 0.2s ease;">All Other Services<br><span style="font-weight: 400; font-size: 0.82rem; opacity: 0.7;">Landscaping, mulch, cleanups, &amp; more</span></button>
+      </div>
+
+      <!-- PANEL: INSTANT PRICING (DeepLawn) -->
+      <div id="panel-instant" style="max-width: 800px; margin-inline: auto;">
         <iframe src="https://v2.deeplawn.com/deeplawn-widget?companyId=66b10be658587f93b68d94b1" style="border: none; width: 100%; min-height: 800px;" title="DeepLawn Instant Estimate Widget" allow="geolocation"></iframe>
       </div>
-    </div>
-  </section>
 
-  <!-- JOBBER FORM FOR OTHER SERVICES -->
-  <section class="section section--cream">
-    <div class="container">
-      <div class="text-center reveal" style="margin-bottom: var(--space-xl);">
-        <span class="section-label">All Other Services</span>
-        <h2>Need Something Else?</h2>
-        <p style="max-width: 640px; margin-inline: auto;">For landscaping, mulch, cleanups, mosquito control, snow removal, or any service not listed above, submit a work request and we'll get you a custom quote.</p>
-      </div>
-      <div style="max-width: 720px; margin-inline: auto;">
+      <!-- PANEL: OTHER SERVICES (Jobber) -->
+      <div id="panel-other" style="max-width: 800px; margin-inline: auto; display: none;">
+        <div style="background: var(--cream); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md);">
+          <p style="text-align: center; margin: 0; color: var(--ink-muted);">Fill out the form below for a custom quote on landscaping, mulch &amp; rock, yard cleanups, mosquito control, snow removal, shrub trimming, pavers, bed renovations, or any other service. We'll get back to you promptly.</p>
+        </div>
         <iframe src="https://clienthub.getjobber.com/client_hubs/d277f979-c223-43fe-87b8-fcd45161c7e4/public/work_request/embedded_work_request_form" style="border: none; width: 100%; min-height: 1200px;" title="Sprout Lawn and Landscape Work Request Form"></iframe>
       </div>
     </div>
@@ -146,6 +148,29 @@
 
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=545120554910959&ev=PageView&noscript=1" alt=""></noscript>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=304993876718773&ev=PageView&noscript=1" alt=""></noscript>
+  <script>
+  function switchTab(tab) {
+    var instant = document.getElementById('panel-instant');
+    var other = document.getElementById('panel-other');
+    var btnInstant = document.getElementById('tab-instant');
+    var btnOther = document.getElementById('tab-other');
+    if (tab === 'instant') {
+      instant.style.display = '';
+      other.style.display = 'none';
+      btnInstant.style.background = 'var(--green-deep)';
+      btnInstant.style.color = 'var(--white)';
+      btnOther.style.background = 'transparent';
+      btnOther.style.color = 'var(--green-deep)';
+    } else {
+      instant.style.display = 'none';
+      other.style.display = '';
+      btnOther.style.background = 'var(--green-deep)';
+      btnOther.style.color = 'var(--white)';
+      btnInstant.style.background = 'transparent';
+      btnInstant.style.color = 'var(--green-deep)';
+    }
+  }
+  </script>
   <script src="/js/main.js"></script>
 </body>
 </html>
