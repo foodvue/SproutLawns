@@ -1346,18 +1346,19 @@ p {
     background: rgba(255,255,255,0.05);
     box-shadow: none;
     border-radius: var(--radius);
-    padding: 0.5rem 0;
+    padding: 0;
     opacity: 1;
     visibility: visible;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s var(--ease);
+    transition: max-height 0.3s var(--ease), padding 0.3s var(--ease);
     width: 100%;
     min-width: 0;
   }
 
   .nav__item.open .nav__dropdown {
     max-height: 2000px;
+    padding: 0.5rem 0;
     transform: none !important;
   }
 
@@ -1459,7 +1460,7 @@ p {
     text-align: center;
   }
 
-  .hero { min-height: 60vh; }
+  .hero { min-height: 85vh; }
   .hero--interior { min-height: 300px; }
 
   .btn-group {
