@@ -1,47 +1,294 @@
 {
   "redirects": [
-    { "source": "/lawn-care/", "destination": "/services/lawn-care/", "statusCode": 301 },
-    { "source": "/lawn-mowing/", "destination": "/services/lawn-mowing/", "statusCode": 301 },
-    { "source": "/fertilization-weed-control/", "destination": "/services/fertilization-weed-control/", "statusCode": 301 },
-    { "source": "/aeration-seeding/", "destination": "/services/aeration-seeding/", "statusCode": 301 },
-    { "source": "/landscaping-services/", "destination": "/services/landscaping-services/", "statusCode": 301 },
-    { "source": "/landscape-trimming/", "destination": "/services/landscape-trimming-pruning/", "statusCode": 301 },
-    { "source": "/landscape-trimming-pruning/", "destination": "/services/landscape-trimming-pruning/", "statusCode": 301 },
-    { "source": "/plantings-and-landscape-bed-renovations/", "destination": "/services/plantings-and-landscape-bed-renovations/", "statusCode": 301 },
-    { "source": "/paver-patios-driveways/", "destination": "/services/paver-patios-driveways/", "statusCode": 301 },
-    { "source": "/mulch-rock/", "destination": "/services/mulch-rock/", "statusCode": 301 },
-    { "source": "/mosquito-control/", "destination": "/services/mosquito-control/", "statusCode": 301 },
-    { "source": "/chinch-bug-control/", "destination": "/services/chinch-bug-control/", "statusCode": 301 },
-    { "source": "/lawn-maintenance/", "destination": "/services/lawn-maintenance/", "statusCode": 301 },
-    { "source": "/yard-cleanups/", "destination": "/services/yard-cleanups/", "statusCode": 301 },
-    { "source": "/spring-cleanups/", "destination": "/services/spring-cleanups/", "statusCode": 301 },
-    { "source": "/fall-cleanups/", "destination": "/services/fall-cleanups/", "statusCode": 301 },
-    { "source": "/leaf-removal/", "destination": "/services/leaf-removal/", "statusCode": 301 },
-    { "source": "/snow-removal/", "destination": "/services/snow-removal/", "statusCode": 301 },
-    { "source": "/commercial-grounds-maintenance/", "destination": "/services/commercial-grounds-maintenance/", "statusCode": 301 },
-    { "source": "/annual-flowers-seasonal-color/", "destination": "/services/annual-flowers-seasonal-color/", "statusCode": 301 },
-    { "source": "/flea-tick-control/", "destination": "/services/flea-tick-control/", "statusCode": 301 },
-    { "source": "/landscape-bed-weed-control/", "destination": "/services/landscape-bed-weed-control/", "statusCode": 301 },
-    { "source": "/new-lawn-seeding/", "destination": "/services/new-lawn-seeding/", "statusCode": 301 },
-    { "source": "/sod-installation/", "destination": "/services/sod-installation/", "statusCode": 301 },
-    { "source": "/lawn-disease-control/", "destination": "/services/lawn-disease-control/", "statusCode": 301 },
-    { "source": "/noblesville/", "destination": "/locations/noblesville/", "statusCode": 301 },
-    { "source": "/carmel/", "destination": "/locations/carmel/", "statusCode": 301 },
-    { "source": "/westfield/", "destination": "/locations/westfield/", "statusCode": 301 },
-    { "source": "/fishers/", "destination": "/locations/fishers/", "statusCode": 301 },
-    { "source": "/fortville/", "destination": "/locations/fortville/", "statusCode": 301 },
-    { "source": "/fortville-in/", "destination": "/locations/fortville/", "statusCode": 301 },
-    { "source": "/mccordsville/", "destination": "/locations/mccordsville/", "statusCode": 301 },
-    { "source": "/mccordsville-in/", "destination": "/locations/mccordsville/", "statusCode": 301 },
-    { "source": "/cicero/", "destination": "/locations/cicero/", "statusCode": 301 },
-    { "source": "/areas-served/", "destination": "/locations/", "statusCode": 301 },
-    { "source": "/areas-served/:path*", "destination": "/locations/:path*", "statusCode": 301 },
-    { "source": "/nora/", "destination": "/locations/", "statusCode": 301 },
-    { "source": "/nora-in/", "destination": "/locations/", "statusCode": 301 },
-    { "source": "/meridian-hills/", "destination": "/locations/", "statusCode": 301 },
-    { "source": "/meridian-hills-in/", "destination": "/locations/", "statusCode": 301 },
-    { "source": "/zionsville/", "destination": "/locations/", "statusCode": 301 },
-    { "source": "/zionsville-in/", "destination": "/locations/", "statusCode": 301 },
-    { "source": "/employment", "destination": "/careers/", "statusCode": 301 }
+    {
+      "source": "/lawn-care/",
+      "destination": "/services/lawn-care/",
+      "statusCode": 301
+    },
+    {
+      "source": "/lawn-mowing/",
+      "destination": "/services/lawn-mowing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fertilization-weed-control/",
+      "destination": "/services/fertilization-weed-control/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aeration-seeding/",
+      "destination": "/services/aeration-seeding/",
+      "statusCode": 301
+    },
+    {
+      "source": "/landscaping-services/",
+      "destination": "/services/landscaping-services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/landscape-trimming/",
+      "destination": "/services/landscape-trimming-pruning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/landscape-trimming-pruning/",
+      "destination": "/services/landscape-trimming-pruning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/plantings-and-landscape-bed-renovations/",
+      "destination": "/services/plantings-and-landscape-bed-renovations/",
+      "statusCode": 301
+    },
+    {
+      "source": "/paver-patios-driveways/",
+      "destination": "/services/paver-patios-driveways/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mulch-rock/",
+      "destination": "/services/mulch-rock/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mosquito-control/",
+      "destination": "/services/mosquito-control/",
+      "statusCode": 301
+    },
+    {
+      "source": "/chinch-bug-control/",
+      "destination": "/services/chinch-bug-control/",
+      "statusCode": 301
+    },
+    {
+      "source": "/lawn-maintenance/",
+      "destination": "/services/lawn-maintenance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yard-cleanups/",
+      "destination": "/services/yard-cleanups/",
+      "statusCode": 301
+    },
+    {
+      "source": "/spring-cleanups/",
+      "destination": "/services/spring-cleanups/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fall-cleanups/",
+      "destination": "/services/fall-cleanups/",
+      "statusCode": 301
+    },
+    {
+      "source": "/leaf-removal/",
+      "destination": "/services/leaf-removal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/snow-removal/",
+      "destination": "/services/snow-removal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/commercial-grounds-maintenance/",
+      "destination": "/services/commercial-grounds-maintenance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/annual-flowers-seasonal-color/",
+      "destination": "/services/annual-flowers-seasonal-color/",
+      "statusCode": 301
+    },
+    {
+      "source": "/flea-tick-control/",
+      "destination": "/services/flea-tick-control/",
+      "statusCode": 301
+    },
+    {
+      "source": "/landscape-bed-weed-control/",
+      "destination": "/services/landscape-bed-weed-control/",
+      "statusCode": 301
+    },
+    {
+      "source": "/new-lawn-seeding/",
+      "destination": "/services/new-lawn-seeding/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sod-installation/",
+      "destination": "/services/sod-installation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/lawn-disease-control/",
+      "destination": "/services/lawn-disease-control/",
+      "statusCode": 301
+    },
+    {
+      "source": "/noblesville/",
+      "destination": "/locations/noblesville/",
+      "statusCode": 301
+    },
+    {
+      "source": "/carmel/",
+      "destination": "/locations/carmel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/westfield/",
+      "destination": "/locations/westfield/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fishers/",
+      "destination": "/locations/fishers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fortville/",
+      "destination": "/locations/fortville/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fortville-in/",
+      "destination": "/locations/fortville/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mccordsville/",
+      "destination": "/locations/mccordsville/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mccordsville-in/",
+      "destination": "/locations/mccordsville/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cicero/",
+      "destination": "/locations/cicero/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas-served/",
+      "destination": "/locations/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas-served/:path*",
+      "destination": "/locations/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/nora/",
+      "destination": "/locations/",
+      "statusCode": 301
+    },
+    {
+      "source": "/nora-in/",
+      "destination": "/locations/",
+      "statusCode": 301
+    },
+    {
+      "source": "/meridian-hills/",
+      "destination": "/locations/",
+      "statusCode": 301
+    },
+    {
+      "source": "/meridian-hills-in/",
+      "destination": "/locations/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zionsville/",
+      "destination": "/locations/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zionsville-in/",
+      "destination": "/locations/",
+      "statusCode": 301
+    },
+    {
+      "source": "/employment",
+      "destination": "/careers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/we-are-now-sprout-lawn-landscape-different-name-same-great-results/",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/feed/",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/feed",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/xmlrpc.php",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/4-reasons-to-apply-a-fall-fertilizer-treatment/",
+      "destination": "/blog/when-to-apply-winterizer-fertilizer-in-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/fall-annual-flowers-in-indiana/",
+      "destination": "/blog/the-6-most-popular-spring-annual-flowers-in-noblesville-in/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/dollar-spot-lawn-disease/",
+      "destination": "/blog/4-lawn-diseases-that-can-invade-lawns-in-fishers-in/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/brown-spots-on-lawn/",
+      "destination": "/blog/what-causes-brown-patches-in-your-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gallery",
+      "destination": "/gallery/",
+      "statusCode": 301
+    },
+    {
+      "source": "/services",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/",
+      "statusCode": 301
+    }
   ]
 }
