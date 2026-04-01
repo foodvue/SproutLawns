@@ -1043,8 +1043,8 @@ p {
   color: rgba(255,255,255,0.7);
   padding-top: 0;
   position: relative;
-  margin-top: -70px;
-  background: linear-gradient(to bottom, transparent 70px, var(--green-dark) 70px);
+  margin-top: -40px;
+  background: linear-gradient(to bottom, transparent 40px, var(--green-dark) 40px);
 }
 
 .footer__grass {
