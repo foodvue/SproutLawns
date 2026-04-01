@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Sprout Lawn &amp; Landscape</title>
-  <meta name="description" content="Lawn care tips, landscaping advice, and seasonal guides for Indiana homeowners from Sprout Lawn &amp; Landscape in Hamilton County.">
+  <title>Blog | Sprout Lawn & Landscape</title>
+  <meta name="description" content="Lawn care tips, landscaping advice, and seasonal guides for Indiana homeowners from Sprout Lawn & Landscape in Hamilton County.">
   <link rel="canonical" href="https://sproutlawns.com/blog/">
-  <meta property="og:title" content="Blog | Sprout Lawn &amp; Landscape">
+  <meta property="og:title" content="Blog | Sprout Lawn & Landscape">
   <meta property="og:description" content="Lawn care tips, landscaping advice, and seasonal guides for Hamilton County homeowners.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sproutlawns.com/blog/">
@@ -14,6 +14,12 @@
   <link rel="icon" type="image/png" href="/images/cropped-Sprout-Icon.png">
   <link rel="stylesheet" href="/css/main.css">
   <meta name="msvalidate.01" content="82A1ADECD72EA1EB2148FD96B28B1EDF">
+  <style>
+    .blog-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: var(--space-xl); }
+    .filter-btn { display: inline-block; padding: 0.5rem 1.2rem; font-family: var(--font-body); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.03em; border-radius: 100px; cursor: pointer; transition: all 0.2s ease; border: 2px solid var(--green-deep); background: transparent; color: var(--green-deep); text-decoration: none; }
+    .filter-btn:hover { background: var(--green-deep); color: var(--white); }
+    .filter-btn.active { background: var(--green-deep); color: var(--white); }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,13 +54,13 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container nav__inner">
-      <a href="/" class="nav__logo"><img src="/images/Sprout-Logo-Reverse-Web.png" alt="Sprout Lawn &amp; Landscape" width="315" height="88"></a>
+      <a href="/" class="nav__logo"><img src="/images/Sprout-Logo-Reverse-Web.png" alt="Sprout Lawn & Landscape" width="315" height="88"></a>
       <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav__menu">
         <li class="nav__item">
           <a href="/services/" class="nav__link">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg></a>
           <div class="nav__dropdown">
-            <a href="/services/lawn-care/">Lawn Care</a><a href="/services/lawn-mowing/">Lawn Mowing</a><a href="/services/fertilization-weed-control/">Fertilization &amp; Weed Control</a><a href="/services/aeration-seeding/">Aeration &amp; Seeding</a><a href="/services/landscaping-services/">Landscaping Services</a><a href="/services/landscape-trimming-pruning/">Landscape Trimming &amp; Pruning</a><a href="/services/plantings-and-landscape-bed-renovations/">Plantings &amp; Bed Renovations</a><a href="/services/paver-patios-driveways/">Paver Patios &amp; Driveways</a><a href="/services/mulch-rock/">Mulch &amp; Rock</a><a href="/services/mosquito-control/">Mosquito Control</a><a href="/services/chinch-bug-control/">Chinch Bug Control</a><a href="/services/lawn-maintenance/">Lawn Maintenance</a><a href="/services/yard-cleanups/">Yard Cleanups</a><a href="/services/spring-cleanups/">Spring Cleanups</a><a href="/services/fall-cleanups/">Fall Cleanups</a><a href="/services/leaf-removal/">Leaf Removal</a><a href="/services/snow-removal/">Snow Removal</a><a href="/services/commercial-grounds-maintenance/">Commercial Grounds Maintenance</a><a href="/services/annual-flowers-seasonal-color/">Annual Flowers &amp; Seasonal Color</a><a href="/services/flea-tick-control/">Flea &amp; Tick Control</a><a href="/services/landscape-bed-weed-control/">Landscape Bed Weed Control</a><a href="/services/new-lawn-seeding/">New Lawn Seeding</a><a href="/services/sod-installation/">Sod Installation</a><a href="/services/lawn-disease-control/">Lawn Disease Control</a>
+            <a href="/services/lawn-care/">Lawn Care</a><a href="/services/lawn-mowing/">Lawn Mowing</a><a href="/services/fertilization-weed-control/">Fertilization & Weed Control</a><a href="/services/aeration-seeding/">Aeration & Seeding</a><a href="/services/landscaping-services/">Landscaping Services</a><a href="/services/landscape-trimming-pruning/">Landscape Trimming & Pruning</a><a href="/services/plantings-and-landscape-bed-renovations/">Plantings & Bed Renovations</a><a href="/services/paver-patios-driveways/">Paver Patios & Driveways</a><a href="/services/mulch-rock/">Mulch & Rock</a><a href="/services/mosquito-control/">Mosquito Control</a><a href="/services/chinch-bug-control/">Chinch Bug Control</a><a href="/services/lawn-maintenance/">Lawn Maintenance</a><a href="/services/yard-cleanups/">Yard Cleanups</a><a href="/services/spring-cleanups/">Spring Cleanups</a><a href="/services/fall-cleanups/">Fall Cleanups</a><a href="/services/leaf-removal/">Leaf Removal</a><a href="/services/snow-removal/">Snow Removal</a><a href="/services/commercial-grounds-maintenance/">Commercial Grounds Maintenance</a><a href="/services/annual-flowers-seasonal-color/">Annual Flowers & Seasonal Color</a><a href="/services/flea-tick-control/">Flea & Tick Control</a><a href="/services/landscape-bed-weed-control/">Landscape Bed Weed Control</a><a href="/services/new-lawn-seeding/">New Lawn Seeding</a><a href="/services/sod-installation/">Sod Installation</a><a href="/services/lawn-disease-control/">Lawn Disease Control</a>
           </div>
         </li>
         <li class="nav__item">
@@ -78,28 +84,28 @@
     <div class="hero__bg"><img src="/images/banner-residential-lawn-with-healthy-grass-and-trees.webp" alt="Healthy residential lawn and landscape in Hamilton County Indiana" width="1920" height="1080"></div>
     <div class="hero__overlay"></div>
     <div class="container hero__content">
-      <h1>Lawn Care Tips &amp; Advice</h1>
+      <h1>Lawn Care Tips & Advice</h1>
     </div>
   </section>
 
   <!-- BLOG LISTING -->
   <section class="section">
     <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-xl);">
-        <p style="max-width: 640px; margin-inline: auto;">Practical lawn care and landscaping advice for homeowners in Hamilton County, Indiana. Written by the crew at Sprout Lawn &amp; Landscape.</p>
+      <div class="text-center" style="margin-bottom: var(--space-lg);">
+        <p style="max-width: 640px; margin-inline: auto;">Practical lawn care and landscaping advice for homeowners in Hamilton County, Indiana. Written by the crew at Sprout Lawn & Landscape.</p>
       </div>
 
       <!-- FILTER BUTTONS -->
-      <div class="blog-filters" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: var(--space-xl);">
-        <button class="btn btn--sm btn--green blog-filter-btn active" data-filter="all">All Posts</button>
-        <button class="btn btn--sm btn--outline blog-filter-btn" data-filter="lawn-care">Lawn Care</button>
-        <button class="btn btn--sm btn--outline blog-filter-btn" data-filter="mowing">Mowing</button>
-        <button class="btn btn--sm btn--outline blog-filter-btn" data-filter="fertilization">Fertilization</button>
-        <button class="btn btn--sm btn--outline blog-filter-btn" data-filter="aeration">Aeration</button>
-        <button class="btn btn--sm btn--outline blog-filter-btn" data-filter="landscaping">Landscaping</button>
-        <button class="btn btn--sm btn--outline blog-filter-btn" data-filter="cleanups">Cleanups</button>
-        <button class="btn btn--sm btn--outline blog-filter-btn" data-filter="pest-disease">Pest &amp; Disease</button>
-        <button class="btn btn--sm btn--outline blog-filter-btn" data-filter="commercial">Commercial</button>
+      <div class="blog-filters">
+        <button class="filter-btn active" data-filter="all">All Posts</button>
+        <button class="filter-btn" data-filter="lawn-care">Lawn Care</button>
+        <button class="filter-btn" data-filter="mowing">Mowing</button>
+        <button class="filter-btn" data-filter="fertilization">Fertilization</button>
+        <button class="filter-btn" data-filter="aeration">Aeration</button>
+        <button class="filter-btn" data-filter="landscaping">Landscaping</button>
+        <button class="filter-btn" data-filter="cleanups">Cleanups</button>
+        <button class="filter-btn" data-filter="pest-disease">Pest & Disease</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
       </div>
 
       <!-- POST GRID -->
@@ -107,127 +113,127 @@
         <a href="/blog/why-your-new-sod-is-turning-brown/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-brown-lawn.webp" alt="Why Your New Sod Is Turning Brown (and How to Fix It)" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Sod Installation</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Sod Installation</span>
             <h3 class="blog-card__title">Why Your New Sod Is Turning Brown (and How to Fix It)</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">March 28, 2026</span>
           </div>
         </a>
         <a href="/blog/why-mowing-patterns-matter-more-than-you-think/" class="blog-card" data-category="mowing">
           <div class="blog-card__img"><img src="/images/blog-zero-turn-lawn-mower.webp" alt="Why Mowing Patterns Matter More Than You Think" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Mowing</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Mowing</span>
             <h3 class="blog-card__title">Why Mowing Patterns Matter More Than You Think</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">March 24, 2026</span>
           </div>
         </a>
         <a href="/blog/how-to-get-your-yard-ready-for-a-cookout-or-party/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-dog-playing-in-lawn.webp" alt="How to Get Your Yard Ready for a Cookout or Party" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Maintenance</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Maintenance</span>
             <h3 class="blog-card__title">How to Get Your Yard Ready for a Cookout or Party</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">March 19, 2026</span>
           </div>
         </a>
         <a href="/blog/the-real-cost-of-skipping-lawn-care-for-a-season/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-weeds-in-bricks.webp" alt="The Real Cost of Skipping Lawn Care for a Season" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">The Real Cost of Skipping Lawn Care for a Season</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">March 14, 2026</span>
           </div>
         </a>
         <a href="/blog/do-you-really-need-a-fall-cleanup/" class="blog-card" data-category="cleanups">
           <div class="blog-card__img"><img src="/images/blog-removing-yard-debris.webp" alt="Do You Really Need a Fall Cleanup? (Yes, Here's Why)" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Fall Cleanups</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Fall Cleanups</span>
             <h3 class="blog-card__title">Do You Really Need a Fall Cleanup? (Yes, Here's Why)</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">March 10, 2026</span>
           </div>
         </a>
         <a href="/blog/why-fresh-mulch-every-spring-is-worth-the-investment/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/blog-mulch-in-landscape-bed.webp" alt="Why Fresh Mulch Every Spring Is Worth the Investment" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Mulch & Rock</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Mulch & Rock</span>
             <h3 class="blog-card__title">Why Fresh Mulch Every Spring Is Worth the Investment</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">March 5, 2026</span>
           </div>
         </a>
         <a href="/blog/why-your-sprinkler-system-might-be-hurting-your-lawn/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-spider-lawn-and-landscape-work-truck.webp" alt="Why Your Sprinkler System Might Be Hurting Your Lawn" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">Why Your Sprinkler System Might Be Hurting Your Lawn</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">February 28, 2026</span>
           </div>
         </a>
         <a href="/blog/what-to-do-with-your-lawn-during-a-drought-in-indiana/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-brown-lawn.webp" alt="What to Do With Your Lawn During a Drought in Indiana" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">What to Do With Your Lawn During a Drought in Indiana</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">February 24, 2026</span>
           </div>
         </a>
         <a href="/blog/how-to-repair-a-lawn-after-construction-damage/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-brown-lawn.webp" alt="How to Repair a Lawn After Construction Damage" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">How to Repair a Lawn After Construction Damage</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">February 19, 2026</span>
           </div>
         </a>
         <a href="/blog/how-shade-changes-what-your-lawn-needs/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-pruning-landscape-tree.webp" alt="How Shade Changes What Your Lawn Needs" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">How Shade Changes What Your Lawn Needs</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">February 14, 2026</span>
           </div>
         </a>
         <a href="/blog/how-long-does-it-take-to-see-results-from-lawn-care/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-fertilizer-on-ground.webp" alt="How Long Does It Take to See Results From Lawn Care?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">How Long Does It Take to See Results From Lawn Care?</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">February 10, 2026</span>
           </div>
         </a>
         <a href="/blog/how-to-tell-when-your-shrubs-need-replacing/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/blog-rounded-shrubs.webp" alt="How to Tell When Your Shrubs Need Replacing, Not Just Trimming" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Landscaping</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Landscaping</span>
             <h3 class="blog-card__title">How to Tell When Your Shrubs Need Replacing, Not Just Trimming</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">February 5, 2026</span>
           </div>
         </a>
         <a href="/blog/why-diy-weed-killer-from-the-hardware-store-often-backfires/" class="blog-card" data-category="fertilization">
           <div class="blog-card__img"><img src="/images/blog-yellow-dandelions.webp" alt="Why DIY Weed Killer From the Hardware Store Often Backfires" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Fertilization & Weed Control</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Fertilization & Weed Control</span>
             <h3 class="blog-card__title">Why DIY Weed Killer From the Hardware Store Often Backfires</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">January 30, 2026</span>
           </div>
         </a>
         <a href="/blog/what-hoa-boards-should-know-about-grounds-maintenance/" class="blog-card" data-category="commercial">
           <div class="blog-card__img"><img src="/images/blog-commercial-landscaping.webp" alt="What HOA Boards Should Know About Grounds Maintenance" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Commercial</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Commercial</span>
             <h3 class="blog-card__title">What HOA Boards Should Know About Grounds Maintenance</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">January 24, 2026</span>
           </div>
         </a>
         <a href="/blog/the-difference-between-dethatching-and-aeration/" class="blog-card" data-category="aeration">
           <div class="blog-card__img"><img src="/images/blog-removing-yard-debris.webp" alt="The Difference Between Dethatching and Aeration" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Aeration & Seeding</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Aeration & Seeding</span>
             <h3 class="blog-card__title">The Difference Between Dethatching and Aeration</h3>
-            <span class="blog-card__date">April 1, 2026</span>
+            <span class="blog-card__date">January 18, 2026</span>
           </div>
         </a>
         <a href="/blog/how-to-prepare-your-lawn-for-winter-in-indiana/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-removing-yard-debris.webp" alt="How to Prepare Your Lawn for Winter in Indiana" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">How to Prepare Your Lawn for Winter in Indiana</h3>
             <span class="blog-card__date">October 25, 2024</span>
           </div>
@@ -235,7 +241,7 @@
         <a href="/blog/when-to-apply-winterizer-fertilizer-in-indiana/" class="blog-card" data-category="fertilization">
           <div class="blog-card__img"><img src="/images/blog-fertilizer-on-ground.webp" alt="When to Apply Winterizer Fertilizer in Indiana" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Fertilization & Weed Control</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Fertilization & Weed Control</span>
             <h3 class="blog-card__title">When to Apply Winterizer Fertilizer in Indiana</h3>
             <span class="blog-card__date">October 10, 2024</span>
           </div>
@@ -243,7 +249,7 @@
         <a href="/blog/how-overseeding-transforms-a-thin-lawn/" class="blog-card" data-category="aeration">
           <div class="blog-card__img"><img src="/images/blog-fertilizer-on-ground.webp" alt="How Overseeding Transforms a Thin Indiana Lawn" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Aeration & Seeding</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Aeration & Seeding</span>
             <h3 class="blog-card__title">How Overseeding Transforms a Thin Indiana Lawn</h3>
             <span class="blog-card__date">September 18, 2024</span>
           </div>
@@ -251,7 +257,7 @@
         <a href="/blog/why-fall-is-the-most-important-season-for-your-indiana-lawn/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-fertilizer-on-ground.webp" alt="Why Fall Is the Most Important Season for Your Indiana Lawn" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">Why Fall Is the Most Important Season for Your Indiana Lawn</h3>
             <span class="blog-card__date">September 5, 2024</span>
           </div>
@@ -259,7 +265,7 @@
         <a href="/blog/when-to-aerate-your-lawn-in-indiana/" class="blog-card" data-category="aeration">
           <div class="blog-card__img"><img src="/images/blog-fertilizer-on-ground.webp" alt="When to Aerate Your Lawn in Indiana" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Aeration & Seeding</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Aeration & Seeding</span>
             <h3 class="blog-card__title">When to Aerate Your Lawn in Indiana</h3>
             <span class="blog-card__date">August 15, 2024</span>
           </div>
@@ -267,7 +273,7 @@
         <a href="/blog/why-commercial-properties-need-year-round-grounds-maintenance/" class="blog-card" data-category="commercial">
           <div class="blog-card__img"><img src="/images/blog-commercial-landscaping.webp" alt="Why Commercial Properties Need Year-Round Grounds Maintenance" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Commercial</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Commercial</span>
             <h3 class="blog-card__title">Why Commercial Properties Need Year-Round Grounds Maintenance</h3>
             <span class="blog-card__date">August 2, 2024</span>
           </div>
@@ -275,7 +281,7 @@
         <a href="/blog/why-your-lawn-looks-great-in-spring-but-dies-in-summer/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-brown-lawn.webp" alt="Why Your Lawn Looks Great in Spring but Dies in Summer" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">Why Your Lawn Looks Great in Spring but Dies in Summer</h3>
             <span class="blog-card__date">July 22, 2024</span>
           </div>
@@ -283,7 +289,7 @@
         <a href="/blog/common-indiana-lawn-weeds/" class="blog-card" data-category="fertilization">
           <div class="blog-card__img"><img src="/images/blog-clover-broadleafs.webp" alt="5 Common Lawn Weeds in Indiana and How to Stop Them" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Fertilization & Weed Control</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Fertilization & Weed Control</span>
             <h3 class="blog-card__title">5 Common Lawn Weeds in Indiana and How to Stop Them</h3>
             <span class="blog-card__date">July 10, 2024</span>
           </div>
@@ -291,7 +297,7 @@
         <a href="/blog/mulch-vs-rock-which-is-better/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/blog-rock-mulch-varieties-in-buckets.webp" alt="Mulch vs Rock: Which Is Better for Your Landscape Beds?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Mulch & Rock</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Mulch & Rock</span>
             <h3 class="blog-card__title">Mulch vs Rock: Which Is Better for Your Landscape Beds?</h3>
             <span class="blog-card__date">June 20, 2024</span>
           </div>
@@ -299,7 +305,7 @@
         <a href="/blog/is-your-lawn-safe-for-dogs/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-dog-playing-in-lawn.webp" alt="Is Your Lawn Safe for Your Dog? Pet-Friendly Lawn Care Tips" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">Is Your Lawn Safe for Your Dog? Pet-Friendly Lawn Care Tips</h3>
             <span class="blog-card__date">June 12, 2024</span>
           </div>
@@ -307,7 +313,7 @@
         <a href="/blog/how-to-tell-if-your-lawn-has-grubs/" class="blog-card" data-category="pest-disease">
           <div class="blog-card__img"><img src="/images/banner-close-up-of-grub.webp" alt="How to Tell If Your Lawn Has Grubs" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Disease</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Disease</span>
             <h3 class="blog-card__title">How to Tell If Your Lawn Has Grubs</h3>
             <span class="blog-card__date">June 12, 2024</span>
           </div>
@@ -315,7 +321,7 @@
         <a href="/blog/when-to-trim-and-prune-shrubs-in-indiana/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/blog-trimming.webp" alt="When to Trim and Prune Shrubs in Central Indiana" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Landscaping</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Landscaping</span>
             <h3 class="blog-card__title">When to Trim and Prune Shrubs in Central Indiana</h3>
             <span class="blog-card__date">June 5, 2024</span>
           </div>
@@ -323,7 +329,7 @@
         <a href="/blog/are-you-killing-your-lawn-by-cutting-it-too-short/" class="blog-card" data-category="mowing">
           <div class="blog-card__img"><img src="/images/blog-brown-lawn.webp" alt="Are You Killing Your Lawn by Cutting it Too Short?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Mowing</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Mowing</span>
             <h3 class="blog-card__title">Are You Killing Your Lawn by Cutting it Too Short?</h3>
             <span class="blog-card__date">May 29, 2024</span>
           </div>
@@ -331,7 +337,7 @@
         <a href="/blog/how-to-keep-deer-out-of-your-landscape/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/blog-deer.webp" alt="How to Keep Deer Out of Your Landscape Beds" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Landscaping</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Landscaping</span>
             <h3 class="blog-card__title">How to Keep Deer Out of Your Landscape Beds</h3>
             <span class="blog-card__date">May 15, 2024</span>
           </div>
@@ -339,7 +345,7 @@
         <a href="/blog/why-your-landscape-beds-get-weedy-so-fast/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/banner-beautiful-plants-in-landscape-beds.webp" alt="Why Your Landscape Beds Get Weedy So Fast" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Landscaping</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Landscaping</span>
             <h3 class="blog-card__title">Why Your Landscape Beds Get Weedy So Fast</h3>
             <span class="blog-card__date">May 8, 2024</span>
           </div>
@@ -347,7 +353,7 @@
         <a href="/blog/what-to-look-for-when-hiring-a-lawn-care-company/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-spider-lawn-and-landscape-work-truck.webp" alt="What to Look for When Hiring a Lawn Care Company" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">What to Look for When Hiring a Lawn Care Company</h3>
             <span class="blog-card__date">April 25, 2024</span>
           </div>
@@ -355,7 +361,7 @@
         <a href="/blog/how-to-get-rid-of-dandelions/" class="blog-card" data-category="fertilization">
           <div class="blog-card__img"><img src="/images/blog-yellow-dandelions.webp" alt="How to Get Rid of Dandelions in Your Lawn" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Fertilization & Weed Control</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Fertilization & Weed Control</span>
             <h3 class="blog-card__title">How to Get Rid of Dandelions in Your Lawn</h3>
             <span class="blog-card__date">April 12, 2024</span>
           </div>
@@ -363,7 +369,7 @@
         <a href="/blog/how-often-should-i-be-treating-my-lawn-for-fleas-ticks-in-indiana/" class="blog-card" data-category="pest-disease">
           <div class="blog-card__img"><img src="/images/banner-tick-on-a-leaf.webp" alt="How Often Should I Be Treating My Lawn for Fleas & Ticks in Indiana?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Pest Control</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Pest Control</span>
             <h3 class="blog-card__title">How Often Should I Be Treating My Lawn for Fleas & Ticks in Indiana?</h3>
             <span class="blog-card__date">April 10, 2024</span>
           </div>
@@ -371,7 +377,7 @@
         <a href="/blog/when-is-the-best-time-to-plant-shrubs-in-indiana/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/banner-purple-coneflowers-blooming.webp" alt="When Is the Best Time to Plant Shrubs in Indiana?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Landscaping</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Landscaping</span>
             <h3 class="blog-card__title">When Is the Best Time to Plant Shrubs in Indiana?</h3>
             <span class="blog-card__date">April 2, 2024</span>
           </div>
@@ -379,7 +385,7 @@
         <a href="/blog/4-lawn-diseases-that-can-invade-lawns-in-fishers-in/" class="blog-card" data-category="pest-disease">
           <div class="blog-card__img"><img src="/images/banner-lawn-infected-with-a-disease.webp" alt="4 Lawn Diseases That Can Invade Lawns in Fishers, IN" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Disease</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Disease</span>
             <h3 class="blog-card__title">4 Lawn Diseases That Can Invade Lawns in Fishers, IN</h3>
             <span class="blog-card__date">March 20, 2024</span>
           </div>
@@ -387,7 +393,7 @@
         <a href="/blog/spring-lawn-care-checklist-indiana/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/blog-removing-yard-debris.webp" alt="Spring Lawn Care Checklist for Central Indiana" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">Spring Lawn Care Checklist for Central Indiana</h3>
             <span class="blog-card__date">March 8, 2024</span>
           </div>
@@ -395,7 +401,7 @@
         <a href="/blog/what-does-a-spring-cleanup-actually-include/" class="blog-card" data-category="cleanups">
           <div class="blog-card__img"><img src="/images/banner-lawn-and-landscape-in-the-spring.webp" alt="What Does a Spring Cleanup Actually Include?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Spring Cleanups</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Spring Cleanups</span>
             <h3 class="blog-card__title">What Does a Spring Cleanup Actually Include?</h3>
             <span class="blog-card__date">March 5, 2024</span>
           </div>
@@ -403,7 +409,7 @@
         <a href="/blog/the-6-most-popular-spring-annual-flowers-in-noblesville-in/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/content-vivid-yellow-sunflowers-blooming_768.webp" alt="The 6 Most Popular Spring Annual Flowers in Noblesville, IN" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Annual Flowers</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Annual Flowers</span>
             <h3 class="blog-card__title">The 6 Most Popular Spring Annual Flowers in Noblesville, IN</h3>
             <span class="blog-card__date">February 28, 2024</span>
           </div>
@@ -411,7 +417,7 @@
         <a href="/blog/benefits-of-hiring-a-local-lawn-care-company-vs-national-chain/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/banner-home-and-maintained-lawn.webp" alt="The Benefits of Hiring a Local Lawn Care Company vs a National Chain" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">The Benefits of Hiring a Local Lawn Care Company vs a National Chain</h3>
             <span class="blog-card__date">January 15, 2024</span>
           </div>
@@ -419,7 +425,7 @@
         <a href="/blog/snow-removal-tips-for-indiana-commercial-properties/" class="blog-card" data-category="commercial">
           <div class="blog-card__img"><img src="/images/banner-commercial-snow-removal.webp" alt="Snow Removal Tips for Indiana Commercial Properties" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Snow Removal</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Snow Removal</span>
             <h3 class="blog-card__title">Snow Removal Tips for Indiana Commercial Properties</h3>
             <span class="blog-card__date">November 20, 2023</span>
           </div>
@@ -427,7 +433,7 @@
         <a href="/blog/fall-leaf-removal-how-often-should-you-clean-your-yard/" class="blog-card" data-category="cleanups">
           <div class="blog-card__img"><img src="/images/banner-bright-fall-leaves-and-rake.webp" alt="Fall Leaf Removal: How Often Should You Clean Your Yard?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Leaf Removal</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Leaf Removal</span>
             <h3 class="blog-card__title">Fall Leaf Removal: How Often Should You Clean Your Yard?</h3>
             <span class="blog-card__date">October 28, 2023</span>
           </div>
@@ -435,7 +441,7 @@
         <a href="/blog/is-it-a-good-idea-to-burn-leaf-piles-on-my-lawn/" class="blog-card" data-category="cleanups">
           <div class="blog-card__img"><img src="/images/banner-leaf-piles.webp" alt="Is It a Good Idea to Burn Leaf Piles on My Lawn?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Leaf Removal</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Leaf Removal</span>
             <h3 class="blog-card__title">Is It a Good Idea to Burn Leaf Piles on My Lawn?</h3>
             <span class="blog-card__date">October 18, 2023</span>
           </div>
@@ -443,7 +449,7 @@
         <a href="/blog/4-ways-clogged-gutters-can-damage-your-property/" class="blog-card" data-category="cleanups">
           <div class="blog-card__img"><img src="/images/blog-clogged-gutter_768.webp" alt="4 Ways Clogged Gutters Can Damage Your Property" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Fall Cleanups</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Fall Cleanups</span>
             <h3 class="blog-card__title">4 Ways Clogged Gutters Can Damage Your Property</h3>
             <span class="blog-card__date">September 14, 2023</span>
           </div>
@@ -451,7 +457,7 @@
         <a href="/blog/how-to-fix-bare-spots-in-your-lawn/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/banner-new-lawn-seeding-soil-with-grass-growth.webp" alt="How to Fix Bare Spots in Your Lawn" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">How to Fix Bare Spots in Your Lawn</h3>
             <span class="blog-card__date">September 5, 2023</span>
           </div>
@@ -459,7 +465,7 @@
         <a href="/blog/have-your-lawn-aerated-this-fall-to-help-it-reach-its-full-potential/" class="blog-card" data-category="aeration">
           <div class="blog-card__img"><img src="/images/banner-core-aeration.webp" alt="Have Your Lawn Aerated This Fall to Reach Its Full Potential" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Aeration</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Aeration</span>
             <h3 class="blog-card__title">Have Your Lawn Aerated This Fall to Reach Its Full Potential</h3>
             <span class="blog-card__date">August 30, 2023</span>
           </div>
@@ -467,7 +473,7 @@
         <a href="/blog/does-it-matter-how-much-fertilizer-you-use-for-your-lawn/" class="blog-card" data-category="fertilization">
           <div class="blog-card__img"><img src="/images/banner-granular-fertilizer-in-a-spreader.webp" alt="Does It Matter How Much Fertilizer You Use for Your Lawn?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Fertilization</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Fertilization</span>
             <h3 class="blog-card__title">Does It Matter How Much Fertilizer You Use for Your Lawn?</h3>
             <span class="blog-card__date">August 22, 2023</span>
           </div>
@@ -475,7 +481,7 @@
         <a href="/blog/what-is-core-aeration-and-why-does-your-lawn-need-it/" class="blog-card" data-category="aeration">
           <div class="blog-card__img"><img src="/images/banner-core-aeration.webp" alt="What Is Core Aeration and Why Does Your Lawn Need It?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Aeration</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Aeration</span>
             <h3 class="blog-card__title">What Is Core Aeration and Why Does Your Lawn Need It?</h3>
             <span class="blog-card__date">August 10, 2023</span>
           </div>
@@ -483,7 +489,7 @@
         <a href="/blog/need-a-new-lawn-consider-these-things-when-choosing-between-sod-seed/" class="blog-card" data-category="lawn-care">
           <div class="blog-card__img"><img src="/images/banner-beautiful-green-lawn.webp" alt="Need a New Lawn? Choosing Between Sod and Seed" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Care</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Care</span>
             <h3 class="blog-card__title">Need a New Lawn? Choosing Between Sod and Seed</h3>
             <span class="blog-card__date">July 25, 2023</span>
           </div>
@@ -491,7 +497,7 @@
         <a href="/blog/how-often-should-you-be-mowing-your-lawn-in-indiana/" class="blog-card" data-category="mowing">
           <div class="blog-card__img"><img src="/images/banner-home-and-maintained-lawn.webp" alt="How Often Should You Be Mowing Your Lawn in Indiana?" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Lawn Mowing</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Lawn Mowing</span>
             <h3 class="blog-card__title">How Often Should You Be Mowing Your Lawn in Indiana?</h3>
             <span class="blog-card__date">June 15, 2023</span>
           </div>
@@ -499,7 +505,7 @@
         <a href="/blog/pavers-the-best-option-for-your-new-patio/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/banner-paved-patio-surrounded-by-mulch.webp" alt="Pavers: The Best Option for Your New Patio" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Landscaping</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Landscaping</span>
             <h3 class="blog-card__title">Pavers: The Best Option for Your New Patio</h3>
             <span class="blog-card__date">May 12, 2023</span>
           </div>
@@ -507,7 +513,7 @@
         <a href="/blog/best-types-of-mulch-for-indiana-landscape-beds/" class="blog-card" data-category="landscaping">
           <div class="blog-card__img"><img src="/images/banner-landscaping-fresh-mulch.webp" alt="Best Types of Mulch for Indiana Landscape Beds" width="950" height="400" loading="lazy"></div>
           <div class="blog-card__body">
-            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Mulch & Rock</span>
+            <span style="font-size: 0.75rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; display: block; margin-bottom: 0.4rem;">Mulch & Rock</span>
             <h3 class="blog-card__title">Best Types of Mulch for Indiana Landscape Beds</h3>
             <span class="blog-card__date">April 18, 2023</span>
           </div>
@@ -515,7 +521,7 @@
       </div>
 
       <!-- NO RESULTS MESSAGE -->
-      <p class="blog-no-results" style="display: none; text-align: center; color: var(--ink-faint); padding: var(--space-xl) 0;">No posts found in this category.</p>
+      <p id="blogNoResults" style="display: none; text-align: center; color: var(--ink-faint); padding: var(--space-xl) 0;">No posts found in this category.</p>
     </div>
   </section>
 
@@ -538,16 +544,31 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="/images/Sprout-Logo-Reverse-1.png" alt="Sprout Lawn &amp; Landscape" width="250" height="69">
+          <img src="/images/Sprout-Logo-Reverse-1.png" alt="Sprout Lawn & Landscape" width="250" height="69">
           <p>Veteran-owned lawn care and landscaping company proudly serving Noblesville, Carmel, Westfield, Fishers, and surrounding communities in Hamilton County, IN.</p>
           <p><strong style="color: var(--white);">(317) 900-7151</strong></p>
         </div>
-        <div><h4 class="footer__heading">Services</h4><div class="footer__links"><a href="/services/lawn-mowing/">Lawn Mowing</a><a href="/services/fertilization-weed-control/">Fertilization &amp; Weed Control</a><a href="/services/aeration-seeding/">Aeration &amp; Seeding</a><a href="/services/landscaping-services/">Landscaping Services</a><a href="/services/mulch-rock/">Mulch &amp; Rock</a><a href="/services/yard-cleanups/">Yard Cleanups</a><a href="/services/snow-removal/">Snow Removal</a><a href="/services/mosquito-control/">Mosquito Control</a></div></div>
-        <div><h4 class="footer__heading">Areas Served</h4><div class="footer__links"><a href="/locations/noblesville/">Noblesville</a><a href="/locations/carmel/">Carmel</a><a href="/locations/westfield/">Westfield</a><a href="/locations/fishers/">Fishers</a><a href="/locations/fortville/">Fortville</a><a href="/locations/mccordsville/">McCordsville</a><a href="/locations/cicero/">Cicero</a></div></div>
-        <div><h4 class="footer__heading">Company</h4><div class="footer__links"><a href="/about/">About Us</a><a href="/blog/">Blog</a><a href="/gallery/">Gallery</a><a href="/contact/">Contact</a><a href="/careers/">Careers</a><a href="/instant-estimate/">Instant Estimate</a><a href="/privacy-policy/">Privacy Policy</a><a href="https://clienthub.getjobber.com/client_hubs/d277f979-c223-43fe-87b8-fcd45161c7e4/login/new" target="_blank" rel="noopener">Make A Payment</a></div></div>
+        <div>
+          <h4 class="footer__heading">Services</h4>
+          <div class="footer__links">
+            <a href="/services/lawn-mowing/">Lawn Mowing</a><a href="/services/fertilization-weed-control/">Fertilization & Weed Control</a><a href="/services/aeration-seeding/">Aeration & Seeding</a><a href="/services/landscaping-services/">Landscaping Services</a><a href="/services/mulch-rock/">Mulch & Rock</a><a href="/services/yard-cleanups/">Yard Cleanups</a><a href="/services/snow-removal/">Snow Removal</a><a href="/services/mosquito-control/">Mosquito Control</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Areas Served</h4>
+          <div class="footer__links">
+            <a href="/locations/noblesville/">Noblesville</a><a href="/locations/carmel/">Carmel</a><a href="/locations/westfield/">Westfield</a><a href="/locations/fishers/">Fishers</a><a href="/locations/fortville/">Fortville</a><a href="/locations/mccordsville/">McCordsville</a><a href="/locations/cicero/">Cicero</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Company</h4>
+          <div class="footer__links">
+            <a href="/about/">About Us</a><a href="/blog/">Blog</a><a href="/gallery/">Gallery</a><a href="/contact/">Contact</a><a href="/careers/">Careers</a><a href="/instant-estimate/">Instant Estimate</a><a href="/privacy-policy/">Privacy Policy</a><a href="https://clienthub.getjobber.com/client_hubs/d277f979-c223-43fe-87b8-fcd45161c7e4/login/new" target="_blank" rel="noopener">Make A Payment</a>
+          </div>
+        </div>
       </div>
       <div class="footer__bottom">
-        <span>&copy; 2025 Sprout Lawn &amp; Landscape. All rights reserved.</span>
+        <span>&copy; 2025 Sprout Lawn & Landscape. All rights reserved.</span>
         <a href="/privacy-policy/">Privacy Policy</a>
       </div>
     </div>
@@ -558,20 +579,20 @@
   <script src="/js/main.js"></script>
   <script>
   (function(){
-    var btns=document.querySelectorAll('.blog-filter-btn');
+    var btns=document.querySelectorAll('.filter-btn');
     var cards=document.querySelectorAll('.blog-card');
-    var noResults=document.querySelector('.blog-no-results');
+    var noMsg=document.getElementById('blogNoResults');
     btns.forEach(function(btn){
       btn.addEventListener('click',function(){
-        btns.forEach(function(b){b.classList.remove('active');b.classList.remove('btn--green');b.classList.add('btn--outline');});
-        btn.classList.add('active');btn.classList.remove('btn--outline');btn.classList.add('btn--green');
+        btns.forEach(function(b){b.classList.remove('active');});
+        btn.classList.add('active');
         var f=btn.getAttribute('data-filter');
         var shown=0;
-        cards.forEach(function(card){
-          if(f==='all'||card.getAttribute('data-category')===f){card.style.display='';shown++}
-          else{card.style.display='none'}
+        cards.forEach(function(c){
+          if(f==='all'||c.getAttribute('data-category')===f){c.style.display='';shown++;}
+          else{c.style.display='none';}
         });
-        noResults.style.display=shown===0?'block':'none';
+        noMsg.style.display=shown===0?'block':'none';
       });
     });
   })();
