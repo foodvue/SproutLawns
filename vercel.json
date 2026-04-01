@@ -289,6 +289,11 @@
       "source": "/blog",
       "destination": "/blog/",
       "statusCode": 301
+    },
+    {
+      "source": "/doorhanger-qr",
+      "destination": "/doorhanger-qr/",
+      "statusCode": 301
     }
   ]
 }
