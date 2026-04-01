@@ -1444,6 +1444,15 @@ p {
     gap: var(--space-lg);
   }
 
+  .footer {
+    margin-top: -15px;
+    background: linear-gradient(to bottom, transparent 15px, var(--green-dark) 15px);
+  }
+
+  .footer__grass {
+    margin-bottom: var(--space-md);
+  }
+
   .footer__bottom {
     flex-direction: column;
     gap: 0.5rem;
