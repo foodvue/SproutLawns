@@ -575,6 +575,9 @@ p {
 .hero h1 .accent {
   color: var(--pink-light);
   text-shadow: 0 0 40px rgba(232, 74, 154, 0.3);
+  font-size: 0.72em;
+  display: block;
+  margin-top: 0.15em;
 }
 
 .hero__desc {
@@ -1321,15 +1324,21 @@ p {
     right: 0;
     bottom: 0;
     background: var(--green-deep);
-    padding: var(--space-md);
+    padding: var(--space-md) 1.5rem;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 999;
+  }
+
+  .nav__menu.open .nav__item {
+    width: 100%;
   }
 
   .nav__menu.open .nav__link {
     padding: 0.75rem 0;
     font-size: 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.08);
+    width: 100%;
   }
 
   .nav__dropdown {
@@ -1338,22 +1347,28 @@ p {
     background: rgba(255,255,255,0.05);
     box-shadow: none;
     border-radius: var(--radius);
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     opacity: 1;
     visibility: visible;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s var(--ease);
+    width: 100%;
+    min-width: 0;
   }
 
   .nav__item.open .nav__dropdown {
-    max-height: 1000px;
+    max-height: 2000px;
   }
 
   .nav__dropdown a {
     color: rgba(255,255,255,0.7);
     font-size: 0.9rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.55rem 1rem;
+    display: block;
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
   }
 
   .nav__dropdown a:hover {
