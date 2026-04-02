@@ -429,6 +429,21 @@
       "source": "/blog/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/",
       "destination": "/blog/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/should-you-continually-clean-up-leaf-piles-or-wait-do-it-all-at-once/",
+      "destination": "/blog/fall-leaf-removal-how-often-should-you-clean-your-yard/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/what-seed-should-you-use-for-growing-a-new-lawn-from-scratch-in-indiana/",
+      "destination": "/blog/how-to-choose-the-right-grass-seed-for-your-indiana-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/has-brown-patch-infected-your-turf-dont-panic-heres-what-you-should-do/",
+      "destination": "/blog/what-causes-brown-patches-in-your-lawn/",
+      "statusCode": 301
     }
   ]
 }
