@@ -13,6 +13,12 @@
   <meta property="og:image" content="https://sproutlawns.com/images/Sprout-Website-Featured-Image.png">
   <link rel="icon" type="image/png" href="/images/cropped-Sprout-Icon.png">
   <link rel="stylesheet" href="/css/main.css">
+  <style>
+    @media (max-width: 480px) {
+      .address-row { grid-template-columns: 1fr 1fr !important; }
+      .address-row > div:first-child { grid-column: 1 / -1; }
+    }
+  </style>
   <meta name="msvalidate.01" content="82A1ADECD72EA1EB2148FD96B28B1EDF">
   <script type="application/ld+json">
   {
@@ -138,7 +144,7 @@
               <input type="text" id="street" name="street" required placeholder="123 Main St" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; box-sizing: border-box;">
             </div>
 
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-md); margin-top: var(--space-md);">
+            <div class="address-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-md); margin-top: var(--space-md);">
               <div>
                 <label for="city" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">City *</label>
                 <select id="city" name="city" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; background: var(--white); box-sizing: border-box; appearance: auto;">
