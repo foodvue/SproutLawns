@@ -140,29 +140,28 @@
             </div>
 
             <div style="margin-top: var(--space-md);">
-              <label for="service" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">Service Needed *</label>
-              <select id="service" name="service" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; background: var(--white); box-sizing: border-box; appearance: auto;">
-                <option value="">Select a service...</option>
-                <option value="Landscaping Services">Landscaping Services</option>
-                <option value="Mulch & Rock Installation">Mulch & Rock Installation</option>
-                <option value="Landscape Trimming & Pruning">Landscape Trimming & Pruning</option>
-                <option value="Plantings & Bed Renovations">Plantings & Bed Renovations</option>
-                <option value="Paver Patios & Driveways">Paver Patios & Driveways</option>
-                <option value="Spring Cleanup">Spring Cleanup</option>
-                <option value="Fall Cleanup">Fall Cleanup</option>
-                <option value="Leaf Removal">Leaf Removal</option>
-                <option value="Yard Cleanup">Yard Cleanup</option>
-                <option value="Snow Removal">Snow Removal</option>
-                <option value="Mosquito Control">Mosquito Control</option>
-                <option value="Flea & Tick Control">Flea & Tick Control</option>
-                <option value="Chinch Bug Control">Chinch Bug Control</option>
-                <option value="Landscape Bed Weed Control">Landscape Bed Weed Control</option>
-                <option value="Sod Installation">Sod Installation</option>
-                <option value="New Lawn Seeding">New Lawn Seeding</option>
-                <option value="Annual Flowers & Seasonal Color">Annual Flowers & Seasonal Color</option>
-                <option value="Commercial Grounds Maintenance">Commercial Grounds Maintenance</option>
-                <option value="Other">Other</option>
-              </select>
+              <label style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.5rem; color: var(--ink);">Services Needed *</label>
+              <div id="service-checkboxes" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.5rem;">
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Landscaping Services"> Landscaping Services</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Mulch & Rock Installation"> Mulch & Rock Installation</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Landscape Trimming & Pruning"> Trimming & Pruning</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Plantings & Bed Renovations"> Plantings & Bed Renovations</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Paver Patios & Driveways"> Paver Patios & Driveways</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Spring Cleanup"> Spring Cleanup</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Fall Cleanup"> Fall Cleanup</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Leaf Removal"> Leaf Removal</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Yard Cleanup"> Yard Cleanup</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Snow Removal"> Snow Removal</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Mosquito Control"> Mosquito Control</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Flea & Tick Control"> Flea & Tick Control</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Chinch Bug Control"> Chinch Bug Control</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Landscape Bed Weed Control"> Landscape Bed Weed Control</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Sod Installation"> Sod Installation</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="New Lawn Seeding"> New Lawn Seeding</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Annual Flowers & Seasonal Color"> Annual Flowers & Seasonal Color</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Commercial Grounds Maintenance"> Commercial Grounds</label>
+                <label style="font-size: 0.9rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 0.4rem;"><input type="checkbox" name="services" value="Other"> Other</label>
+              </div>
             </div>
 
             <div style="margin-top: var(--space-md);">
@@ -252,11 +251,14 @@
     var email = document.getElementById('email').value.trim();
     var phone = document.getElementById('phone').value.trim();
     var address = document.getElementById('address').value.trim();
-    var service = document.getElementById('service').value;
+    var checked = document.querySelectorAll('input[name="services"]:checked');
+    var services = [];
+    checked.forEach(function(cb) { services.push(cb.value); });
+    var service = services.join(', ');
     var message = document.getElementById('message').value.trim();
 
-    if (!firstName || !lastName || !email || !phone || !address || !service) {
-      alert('Please fill out all required fields.');
+    if (!firstName || !lastName || !email || !phone || !address || services.length === 0) {
+      alert('Please fill out all required fields and select at least one service.');
       return;
     }
 
