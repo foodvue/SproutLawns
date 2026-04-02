@@ -444,6 +444,16 @@
       "source": "/blog/has-brown-patch-infected-your-turf-dont-panic-heres-what-you-should-do/",
       "destination": "/blog/what-causes-brown-patches-in-your-lawn/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/our-new-website-has-been-launched-live/",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/why-your-mulch-should-be-refreshed-in-spring/",
+      "destination": "/blog/why-fresh-mulch-every-spring-is-worth-the-investment/",
+      "statusCode": 301
     }
   ]
 }
