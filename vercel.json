@@ -364,6 +364,71 @@
       "source": "/blog/the-ultimate-guide-to-landscape-trimming-and-pruning/",
       "destination": "/blog/when-to-trim-and-prune-shrubs-in-indiana/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/why-am-i-seeing-brown-spots-on-my-lawn/",
+      "destination": "/blog/what-causes-brown-patches-in-your-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/consider-these-3-things-before-planting-fall-annual-flowers/",
+      "destination": "/blog/the-6-most-popular-spring-annual-flowers-in-noblesville-in/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/dollar-spot-what-is-this-lawn-disease-can-it-be-cured/",
+      "destination": "/blog/4-lawn-diseases-that-can-invade-lawns-in-fishers-in/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/what-is-the-best-way-to-keep-weeds-off-of-your-lawn/",
+      "destination": "/blog/common-indiana-lawn-weeds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/top-4-mulch-and-rock-for-landscape-beds-in-indiana/",
+      "destination": "/blog/best-types-of-mulch-for-indiana-landscape-beds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/our-top-3-lawn-mowing-maintenance-practices-for-2020/",
+      "destination": "/blog/why-mowing-patterns-matter-more-than-you-think/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/winter-is-the-best-time-to-start-planning-your-spring-landscaping-projects/",
+      "destination": "/blog/spring-lawn-care-checklist-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/when-to-do-landscape-maintenance-including-trimmingpruning-mulching-weeding-more/",
+      "destination": "/blog/when-to-trim-and-prune-shrubs-in-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/is-lawn-mowing-height-really-that-important/",
+      "destination": "/blog/are-you-killing-your-lawn-by-cutting-it-too-short/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/category/:path*",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/author/:path*",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/page/:path*",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/",
+      "destination": "/blog/",
+      "statusCode": 301
     }
   ]
 }
