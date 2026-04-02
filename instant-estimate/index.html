@@ -89,8 +89,8 @@
   <section class="section">
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-lg);">
-        <h2>Your Price in Under <span style="color: var(--pink);">60 Seconds</span></h2>
-        <p style="max-width: 640px; margin-inline: auto; font-size: 1.05rem;">No phone calls. No waiting. No site visit needed.</p>
+        <h2 id="estimate-heading">Your Price in Under <span style="color: var(--pink);">60 Seconds</span></h2>
+        <p id="estimate-subtext" style="max-width: 640px; margin-inline: auto; font-size: 1.05rem;">No phone calls. No waiting. No site visit needed.</p>
       </div>
 
       <!-- TAB BUTTONS -->
@@ -252,6 +252,8 @@
     var other = document.getElementById('panel-other');
     var btnInstant = document.getElementById('tab-instant');
     var btnOther = document.getElementById('tab-other');
+    var heading = document.getElementById('estimate-heading');
+    var subtext = document.getElementById('estimate-subtext');
     if (tab === 'instant') {
       instant.style.display = '';
       other.style.display = 'none';
@@ -259,6 +261,8 @@
       btnInstant.style.color = 'var(--white)';
       btnOther.style.background = 'transparent';
       btnOther.style.color = 'var(--green-deep)';
+      heading.innerHTML = 'Your Price in Under <span style="color: var(--pink);">60 Seconds</span>';
+      subtext.textContent = 'No phone calls. No waiting. No site visit needed.';
     } else {
       instant.style.display = 'none';
       other.style.display = '';
@@ -266,6 +270,8 @@
       btnOther.style.color = 'var(--white)';
       btnInstant.style.background = 'transparent';
       btnInstant.style.color = 'var(--green-deep)';
+      heading.innerHTML = 'Request a <span style="color: var(--pink);">Free Quote</span>';
+      subtext.textContent = 'Tell us about your project and we will get back to you within a few hours.';
     }
   }
 
