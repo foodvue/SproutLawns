@@ -415,15 +415,16 @@ p {
 .mega__heading {
   display: block;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--green-deep);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.5rem 0.75rem 0.25rem;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 0.75rem 0.3rem;
   margin-top: 0.75rem;
-  border-bottom: 2px solid var(--green-deep);
   margin-bottom: 0.25rem;
+  border-bottom: 2px solid var(--pink);
+  text-decoration: none;
 }
 .mega__heading:first-child { margin-top: 0; }
 
@@ -1400,15 +1401,17 @@ p {
 
   .mega__heading {
     color: var(--pink-light);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    padding: 0.75rem 1rem 0.25rem;
+    padding: 0.6rem 1rem 0.3rem;
     margin-top: 0.75rem;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
     margin-bottom: 0.15rem;
+    background: none;
+    border-bottom: 2px solid var(--pink-light);
+    border-radius: 0;
   }
 
-  .mega__heading:first-child { margin-top: 0; }
+  .mega__heading:first-child { margin-top: 0.25rem; }
 
   .nav__dropdown a {
     color: rgba(255,255,255,0.7);
