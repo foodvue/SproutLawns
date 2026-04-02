@@ -107,12 +107,81 @@
 
       <!-- PANEL: OTHER SERVICES (Jobber) -->
       <div id="panel-other" style="display: none;">
-        <div style="max-width: 700px; margin: 0 auto; text-align: center; background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); padding: var(--space-xl);">
-          <h3 style="font-size: 1.5rem; margin-bottom: var(--space-sm);">Request a Custom Quote</h3>
-          <p style="color: var(--ink-muted); margin-bottom: var(--space-md); line-height: 1.7;">Need pricing for landscaping, mulch, cleanups, trimming, pest control, snow removal, or any other service? Fill out our quick work request form and we'll get back to you with a quote, usually within a few hours.</p>
-          <a href="https://clienthub.getjobber.com/client_hubs/d277f979-c223-43fe-87b8-fcd45161c7e4/public/work_request/new" target="_blank" rel="noopener" class="btn btn--pink btn--lg" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Request a Quote</a>
-          <p style="color: var(--ink-faint); font-size: 0.85rem; margin-top: var(--space-md);">Or call us directly: <a href="tel:317-900-7151" style="color: var(--green-deep); font-weight: 600;">(317) 900-7151</a></p>
+        <div style="max-width: 700px; margin: 0 auto; background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); padding: var(--space-xl);">
+          <h3 style="font-size: 1.5rem; margin-bottom: var(--space-sm); text-align: center;">Request a Custom Quote</h3>
+          <p style="color: var(--ink-muted); margin-bottom: var(--space-lg); text-align: center; line-height: 1.7;">Fill out the form below and we'll get back to you with a quote, usually within a few hours.</p>
+          
+          <div id="quote-form-wrapper">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+              <div>
+                <label for="firstName" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; box-sizing: border-box;">
+              </div>
+              <div>
+                <label for="lastName" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; box-sizing: border-box;">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); margin-top: var(--space-md);">
+              <div>
+                <label for="email" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">Email *</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; box-sizing: border-box;">
+              </div>
+              <div>
+                <label for="phone" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">Phone *</label>
+                <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; box-sizing: border-box;">
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-md);">
+              <label for="address" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">Property Address *</label>
+              <input type="text" id="address" name="address" required placeholder="123 Main St, Noblesville, IN 46060" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; box-sizing: border-box;">
+            </div>
+
+            <div style="margin-top: var(--space-md);">
+              <label for="service" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">Service Needed *</label>
+              <select id="service" name="service" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; background: var(--white); box-sizing: border-box; appearance: auto;">
+                <option value="">Select a service...</option>
+                <option value="Landscaping Services">Landscaping Services</option>
+                <option value="Mulch & Rock Installation">Mulch & Rock Installation</option>
+                <option value="Landscape Trimming & Pruning">Landscape Trimming & Pruning</option>
+                <option value="Plantings & Bed Renovations">Plantings & Bed Renovations</option>
+                <option value="Paver Patios & Driveways">Paver Patios & Driveways</option>
+                <option value="Spring Cleanup">Spring Cleanup</option>
+                <option value="Fall Cleanup">Fall Cleanup</option>
+                <option value="Leaf Removal">Leaf Removal</option>
+                <option value="Yard Cleanup">Yard Cleanup</option>
+                <option value="Snow Removal">Snow Removal</option>
+                <option value="Mosquito Control">Mosquito Control</option>
+                <option value="Flea & Tick Control">Flea & Tick Control</option>
+                <option value="Chinch Bug Control">Chinch Bug Control</option>
+                <option value="Landscape Bed Weed Control">Landscape Bed Weed Control</option>
+                <option value="Sod Installation">Sod Installation</option>
+                <option value="New Lawn Seeding">New Lawn Seeding</option>
+                <option value="Annual Flowers & Seasonal Color">Annual Flowers & Seasonal Color</option>
+                <option value="Commercial Grounds Maintenance">Commercial Grounds Maintenance</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div style="margin-top: var(--space-md);">
+              <label for="message" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">Tell Us About Your Project</label>
+              <textarea id="message" name="message" rows="4" placeholder="Any details that would help us give you an accurate quote..." style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; resize: vertical; box-sizing: border-box;"></textarea>
+            </div>
+
+            <button type="button" id="quote-submit-btn" onclick="submitQuoteForm()" style="display: block; width: 100%; margin-top: var(--space-lg); padding: 1rem; background: var(--pink); color: var(--white); border: none; border-radius: var(--radius); font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.2s ease;">Submit Request</button>
+            
+            <p style="color: var(--ink-faint); font-size: 0.82rem; margin-top: var(--space-sm); text-align: center;">Or call us directly: <a href="tel:317-900-7151" style="color: var(--green-deep); font-weight: 600;">(317) 900-7151</a></p>
+          </div>
+
+          <div id="quote-form-success" style="display: none; text-align: center; padding: var(--space-xl) 0;">
+            <div style="font-size: 3rem; margin-bottom: var(--space-sm);">&#10003;</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: var(--space-sm); color: var(--green-deep);">Request Received!</h3>
+            <p style="color: var(--ink-muted); line-height: 1.7;">Thanks! We'll review your request and get back to you with a quote, usually within a few hours. If you need something sooner, call us at <a href="tel:317-900-7151" style="color: var(--green-deep); font-weight: 600;">(317) 900-7151</a>.</p>
+          </div>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -175,6 +244,60 @@
       btnInstant.style.background = 'transparent';
       btnInstant.style.color = 'var(--green-deep)';
     }
+  }
+
+  function submitQuoteForm() {
+    var firstName = document.getElementById('firstName').value.trim();
+    var lastName = document.getElementById('lastName').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var address = document.getElementById('address').value.trim();
+    var service = document.getElementById('service').value;
+    var message = document.getElementById('message').value.trim();
+
+    if (!firstName || !lastName || !email || !phone || !address || !service) {
+      alert('Please fill out all required fields.');
+      return;
+    }
+
+    var btn = document.getElementById('quote-submit-btn');
+    btn.textContent = 'Sending...';
+    btn.style.opacity = '0.7';
+    btn.style.pointerEvents = 'none';
+
+    fetch('https://hooks.zapier.com/hooks/catch/27072165/unp91mr/', {
+      method: 'POST',
+      body: JSON.stringify({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        address: address,
+        service: service,
+        message: message
+      })
+    })
+    .then(function() {
+      document.getElementById('quote-form-wrapper').style.display = 'none';
+      document.getElementById('quote-form-success').style.display = '';
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          send_to: 'AW-748853640/d7frCOLwq7caEIiziuUC'
+        });
+      }
+      if (typeof window.uetq !== 'undefined') {
+        window.uetq.push('event', 'form_submission', {});
+      }
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+    })
+    .catch(function() {
+      btn.textContent = 'Submit Request';
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = '';
+      alert('Something went wrong. Please try again or call us at (317) 900-7151.');
+    });
   }
   </script>
   <script src="/js/main.js"></script>
