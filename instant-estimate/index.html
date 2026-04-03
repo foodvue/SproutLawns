@@ -328,7 +328,7 @@
         state: state,
         zip: zip,
         service: service,
-        message: 'SERVICES REQUESTED: ' + service + '\n\nDETAILS: ' + (message || 'No additional details provided.')
+        message: 'SERVICES REQUESTED:\n- ' + services.join('\n- ') + '\n\nDETAILS:\n' + (message || 'No additional details provided.')
       })
     })
     .then(function() {
