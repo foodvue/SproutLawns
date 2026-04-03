@@ -34,6 +34,7 @@
   function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', 'AW-748853640');
+  gtag('config', 'G-NJG1G7FM07');
 
   // Google Ads phone conversion tracking
   gtag('config', 'AW-748853640/d7frCOLwq7caEIiziuUC', {
