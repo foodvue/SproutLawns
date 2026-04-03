@@ -205,7 +205,8 @@
 
             <div style="margin-top: var(--space-md);">
               <label for="message" style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--ink);">Tell Us About Your Project</label>
-              <textarea id="message" name="message" rows="4" placeholder="Any details that would help us give you an accurate quote..." style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; resize: vertical; box-sizing: border-box;"></textarea>
+              <textarea id="message" name="message" rows="4" maxlength="500" placeholder="Any details that would help us give you an accurate quote..." style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; resize: vertical; box-sizing: border-box;" oninput="document.getElementById('char-count').textContent=this.value.length+' / 500'"></textarea>
+              <span id="char-count" style="display: block; text-align: right; font-size: 0.78rem; color: var(--ink-faint); margin-top: 0.2rem;">0 / 500</span>
             </div>
 
             <button type="button" id="quote-submit-btn" onclick="submitQuoteForm()" style="display: block; width: 100%; margin-top: var(--space-lg); padding: 1rem; background: var(--pink); color: var(--white); border: none; border-radius: var(--radius); font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.2s ease;">Submit Request</button>
@@ -327,7 +328,7 @@
         state: state,
         zip: zip,
         service: service,
-        message: message
+        message: 'SERVICES REQUESTED: ' + service + '\n\nDETAILS: ' + (message || 'No additional details provided.')
       })
     })
     .then(function() {
