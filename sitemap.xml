@@ -157,6 +157,9 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.sproutlawns.com/locations/</loc>
+  </url>
+  <url>
     <loc>https://www.sproutlawns.com/locations/carmel/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
