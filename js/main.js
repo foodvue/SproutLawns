@@ -38,7 +38,7 @@
 
   // Google Ads phone conversion tracking
   gtag('config', 'AW-748853640/d7frCOLwq7caEIiziuUC', {
-    phone_conversion_number: '(317) 316-8654'
+    phone_conversion_number: '(317) 900-7151'
   });
 
   // --- Bing UET: 15247889 ---
