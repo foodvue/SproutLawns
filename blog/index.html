@@ -584,7 +584,7 @@
     var count = 0;
     cards.forEach(function(card) {
       if (cat === 'all' || card.getAttribute('data-category') === cat) {
-        card.style.display = '';
+        card.style.display = 'block';
         count++;
       } else {
         card.style.display = 'none';
