@@ -656,25 +656,5 @@
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=545120554910959&ev=PageView&noscript=1" alt=""></noscript>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=304993876718773&ev=PageView&noscript=1" alt=""></noscript>
   <script src="/js/main.js"></script>
-  <script>
-  (function(){
-    var btns=document.querySelectorAll('.filter-btn');
-    var cards=document.querySelectorAll('.blog-card');
-    var noMsg=document.getElementById('blogNoResults');
-    btns.forEach(function(btn){
-      btn.addEventListener('click',function(){
-        btns.forEach(function(b){b.classList.remove('active');});
-        btn.classList.add('active');
-        var f=btn.getAttribute('data-filter');
-        var shown=0;
-        cards.forEach(function(c){
-          if(f==='all'||c.getAttribute('data-category')===f){c.style.display='';shown++;}
-          else{c.style.display='none';}
-        });
-        noMsg.style.display=shown===0?'block':'none';
-      });
-    });
-  })();
-  </script>
 </body>
 </html>
