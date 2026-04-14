@@ -75,6 +75,7 @@
     initSmoothScroll();
     initStickyNav();
     initPhoneConversion();
+    initPhoneClickTracking();
   });
 
   /* ==========================================================
@@ -263,6 +264,23 @@
         // Bing
         if (typeof window.uetq !== 'undefined') {
           window.uetq.push('event', 'phone_call', {});
+        }
+      });
+    });
+  }
+
+  /* ==========================================================
+     GA4 PHONE CLICK TRACKING
+     Fires GA4 key event on any tel: link click sitewide
+     ========================================================== */
+  function initPhoneClickTracking() {
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'phone_call', {
+            event_category: 'engagement',
+            event_label: link.href.replace('tel:', '')
+          });
         }
       });
     });
