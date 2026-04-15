@@ -206,7 +206,7 @@
   </url>
   <url>
     <loc>https://www.sproutlawns.com/blog/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -437,6 +437,12 @@
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.sproutlawns.com/blog/why-we-apply-pre-emergent-twice-purdue-study/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.sproutlawns.com/blog/the-best-time-to-schedule-snow-removal-service-in-indiana/</loc>
