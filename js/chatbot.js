@@ -14,7 +14,7 @@
   // --- Config ---
   var API_ENDPOINT = '/api/chat';
   var STORAGE_KEY = 'sprout_chat_messages_v1';
-  var GREETING = "Hey \uD83C\uDF31 Sprout's web assistant here. Want a 2-minute lawn quote, or have a question about what we do? What's going on with your yard?";
+  var GREETING = "Hey \uD83C\uDF31 Sprout's web assistant here. Want a 60-second lawn quote, or have a question about what we do? What's going on with your yard?";
   var MAX_INPUT_LEN = 500;
 
   // --- State ---
