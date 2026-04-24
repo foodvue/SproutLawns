@@ -76,7 +76,22 @@
     initStickyNav();
     initPhoneConversion();
     initPhoneClickTracking();
+    loadChatbot();
   });
+
+  /* ==========================================================
+     LOAD CHATBOT
+     Injects /js/chatbot.js (self-contained widget + styles)
+     Loads asynchronously so it doesn't block page render.
+     ========================================================== */
+  function loadChatbot() {
+    if (document.getElementById('sprout-chatbot-script')) return;
+    var s = document.createElement('script');
+    s.id = 'sprout-chatbot-script';
+    s.src = '/js/chatbot.js';
+    s.async = true;
+    document.body.appendChild(s);
+  }
 
   /* ==========================================================
      NAVIGATION
