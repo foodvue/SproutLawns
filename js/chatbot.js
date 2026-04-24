@@ -111,6 +111,11 @@
 
     panel.querySelector('.sprout-chat-close').addEventListener('click', closeChat);
     formEl.addEventListener('submit', handleSubmit);
+
+    // Defensive: when input is focused (mobile keyboard opens), scroll messages to bottom
+    inputEl.addEventListener('focus', function () {
+      setTimeout(scrollToBottom, 300);
+    });
   }
 
   function openChat() {
@@ -124,18 +129,70 @@
     renderAllMessages();
     if (messages.length === 0 && !hasGreeted) {
       renderMessage('assistant', GREETING);
+      renderQuickReplies();
       hasGreeted = true;
     }
 
-    // Focus input after panel transition
-    setTimeout(function () {
-      if (inputEl) inputEl.focus();
-    }, 200);
+    // Don't auto-focus input on mobile (keyboard pops up immediately and hides greeting)
+    // Desktop only: focus input after panel transition
+    if (window.innerWidth > 768) {
+      setTimeout(function () {
+        if (inputEl) inputEl.focus();
+      }, 200);
+    }
 
     // Track open event
     if (typeof gtag === 'function') {
       gtag('event', 'chat_opened', { event_category: 'engagement' });
     }
+  }
+
+  function renderQuickReplies() {
+    var container = document.createElement('div');
+    container.className = 'sprout-chat-quickreplies';
+    container.id = 'sprout-chat-quickreplies';
+    container.innerHTML =
+      '<button type="button" class="sprout-chat-qr" data-action="quote">' +
+        '<span class="sprout-chat-qr-icon">📐</span> Get a fast quote' +
+      '</button>' +
+      '<button type="button" class="sprout-chat-qr" data-action="services">' +
+        '<span class="sprout-chat-qr-icon">🌱</span> Ask about services' +
+      '</button>' +
+      '<a href="tel:3179007151" class="sprout-chat-qr" data-action="call">' +
+        '<span class="sprout-chat-qr-icon">📞</span> Call (317) 900-7151' +
+      '</a>';
+    messagesEl.appendChild(container);
+    scrollToBottom();
+
+    // Wire up button clicks
+    container.querySelectorAll('button.sprout-chat-qr').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var action = btn.getAttribute('data-action');
+        removeQuickReplies();
+        if (action === 'quote') {
+          inputEl.value = "I'd like to get a quote";
+          formEl.dispatchEvent(new Event('submit'));
+        } else if (action === 'services') {
+          inputEl.value = "Tell me about your services";
+          formEl.dispatchEvent(new Event('submit'));
+        }
+      });
+    });
+
+    // Phone link: track click + remove buttons
+    var phoneLink = container.querySelector('a[data-action="call"]');
+    if (phoneLink) {
+      phoneLink.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'chat_phone_click', { event_category: 'engagement' });
+        }
+      });
+    }
+  }
+
+  function removeQuickReplies() {
+    var qr = document.getElementById('sprout-chat-quickreplies');
+    if (qr) qr.remove();
   }
 
   function closeChat() {
@@ -222,6 +279,9 @@
 
     var text = inputEl.value.trim();
     if (!text) return;
+
+    // Hide quick-reply buttons once user sends anything (typed or clicked)
+    removeQuickReplies();
 
     // Add user message
     messages.push({ role: 'user', content: text });
@@ -367,12 +427,27 @@
         'font-size: 11px; color: #9a9a9a; text-align: center; padding: 6px 12px 10px; background: white;' +
       '}' +
 
+      /* Quick-reply buttons (shown under greeting) */
+      '.sprout-chat-quickreplies {' +
+        'display: flex; flex-direction: column; gap: 8px; padding: 4px 0; align-self: flex-start; max-width: 90%;' +
+      '}' +
+      '.sprout-chat-qr {' +
+        'display: inline-flex; align-items: center; gap: 8px;' +
+        'background: white; color: #2c4a2e; border: 1.5px solid #2c4a2e;' +
+        'padding: 9px 14px; border-radius: 999px; cursor: pointer;' +
+        'font-family: inherit; font-size: 13px; font-weight: 500;' +
+        'text-decoration: none; transition: all 0.15s ease; text-align: left;' +
+      '}' +
+      '.sprout-chat-qr:hover { background: #2c4a2e; color: white; }' +
+      '.sprout-chat-qr-icon { font-size: 15px; line-height: 1; }' +
+
       /* Mobile (≤768px) — matches site's mobile-bottom-bar breakpoint.
+         Use 100dvh (dynamic viewport height) so panel resizes when keyboard opens.
          Chatbot button sits above the sticky bottom bar (~75px tall). */
       '@media (max-width: 768px) {' +
         '.sprout-chat-panel {' +
           'width: 100%; max-width: 100%; bottom: 0; right: 0; left: 0; top: 0;' +
-          'height: 100%; max-height: 100%; border-radius: 0;' +
+          'height: 100dvh; max-height: 100dvh; border-radius: 0;' +
         '}' +
         '.sprout-chat-button { bottom: 88px; right: 16px; padding: 12px; border-radius: 50%; }' +
         '.sprout-chat-button-label { display: none; }' +
