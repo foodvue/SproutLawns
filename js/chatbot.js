@@ -349,13 +349,17 @@
     style.textContent =
       '.sprout-chat-button {' +
         'position: fixed; bottom: 20px; right: 20px; z-index: 9998;' +
-        'background: #2c4a2e; color: white; border: none; cursor: pointer;' +
-        'padding: 14px 20px; border-radius: 999px; font-family: "Outfit", -apple-system, sans-serif;' +
-        'font-size: 14px; font-weight: 500; box-shadow: 0 4px 12px rgba(0,0,0,0.2);' +
+        'background: #2c4a2e; color: white; border: 3px solid #d4327f; cursor: pointer;' +
+        'padding: 12px 18px; border-radius: 999px; font-family: "Outfit", -apple-system, sans-serif;' +
+        'font-size: 14px; font-weight: 500;' +
+        'box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 0 0 1px rgba(212, 50, 127, 0.15);' +
         'display: flex; align-items: center; gap: 8px; transition: all 0.2s ease;' +
       '}' +
-      '.sprout-chat-button:hover { background: #1e3520; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.25); }' +
-      '.sprout-chat-button:focus-visible { outline: 3px solid #d4327f; outline-offset: 2px; }' +
+      '.sprout-chat-button:hover {' +
+        'background: #1e3520; border-color: #e84a9a; transform: translateY(-2px);' +
+        'box-shadow: 0 6px 18px rgba(0,0,0,0.25), 0 0 0 4px rgba(212, 50, 127, 0.2);' +
+      '}' +
+      '.sprout-chat-button:focus-visible { outline: 3px solid #d4327f; outline-offset: 4px; }' +
       '.sprout-chat-button.hidden { opacity: 0; pointer-events: none; transform: scale(0.8); }' +
 
       '.sprout-chat-panel {' +
