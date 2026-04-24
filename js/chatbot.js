@@ -216,7 +216,69 @@
     msg.className = 'sprout-chat-msg sprout-chat-msg-' + role;
     msg.innerHTML = formatMessage(text);
     messagesEl.appendChild(msg);
+
+    // For assistant messages: surface any links/phones as prominent CTA buttons below
+    if (role === 'assistant') {
+      renderInlineCTAs(text);
+    }
     scrollToBottom();
+  }
+
+  function renderInlineCTAs(text) {
+    var ctas = [];
+    var seen = {};
+
+    function add(action, label, href) {
+      if (seen[action]) return;
+      seen[action] = true;
+      ctas.push({ action: action, label: label, href: href });
+    }
+
+    if (/\/instant-estimate\//.test(text)) {
+      add('quote', '📐 Get a fast quote', '/instant-estimate/');
+    }
+    if (/\/contact\//.test(text)) {
+      add('contact', '✉️ Send us a message', '/contact/');
+    }
+    if (/\/careers\//.test(text)) {
+      add('careers', '💼 See open positions', '/careers/');
+    }
+    if (/\(317\)\s?900-7151|3179007151|tel:3179007151/.test(text)) {
+      add('call', '📞 Call (317) 900-7151', 'tel:3179007151');
+    }
+    if (/faith@sproutlawns\.com/i.test(text)) {
+      add('email', '✉️ Email Faith', 'mailto:faith@sproutlawns.com');
+    }
+
+    if (ctas.length === 0) return;
+    // Cap at 2 buttons per message to avoid overwhelming
+    ctas = ctas.slice(0, 2);
+
+    var container = document.createElement('div');
+    container.className = 'sprout-chat-inline-ctas';
+
+    ctas.forEach(function (cta) {
+      var btn = document.createElement('a');
+      btn.href = cta.href;
+      btn.className = 'sprout-chat-inline-cta';
+      btn.textContent = cta.label;
+      btn.setAttribute('data-action', cta.action);
+      // Open same tab for internal pages, default behavior for tel:/mailto:
+      if (cta.href.charAt(0) === '/') {
+        btn.setAttribute('rel', 'noopener');
+      }
+      btn.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'chat_cta_click', {
+            event_category: 'engagement',
+            event_label: cta.action
+          });
+        }
+      });
+      container.appendChild(btn);
+    });
+
+    messagesEl.appendChild(container);
   }
 
   function renderTypingIndicator() {
@@ -444,6 +506,19 @@
       '}' +
       '.sprout-chat-qr:hover { background: #2c4a2e; color: white; }' +
       '.sprout-chat-qr-icon { font-size: 15px; line-height: 1; }' +
+
+      /* Inline CTAs (appear under any assistant message that mentions a link/phone) */
+      '.sprout-chat-inline-ctas {' +
+        'display: flex; flex-wrap: wrap; gap: 6px; align-self: flex-start; margin-top: -4px; max-width: 90%;' +
+      '}' +
+      '.sprout-chat-inline-cta {' +
+        'display: inline-flex; align-items: center;' +
+        'background: #d4327f; color: white; border: none;' +
+        'padding: 8px 14px; border-radius: 999px;' +
+        'font-family: inherit; font-size: 13px; font-weight: 500;' +
+        'text-decoration: none; cursor: pointer; transition: all 0.15s ease;' +
+      '}' +
+      '.sprout-chat-inline-cta:hover { background: #b82a6b; transform: translateY(-1px); }' +
 
       /* Mobile (≤768px) — matches site's mobile-bottom-bar breakpoint.
          Use 100dvh (dynamic viewport height) so panel resizes when keyboard opens.
