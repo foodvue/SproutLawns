@@ -24,6 +24,10 @@
   fbq('init', '304993876718773');
   fbq('track', 'PageView');
 
+  // --- Facebook Pixel 3 (active ad account): 1366652494845892 ---
+  fbq('init', '1366652494845892');
+  fbq('track', 'PageView');
+
   // --- Google Ads: AW-748853640 ---
   var gtagScript = document.createElement('script');
   gtagScript.async = true;
