@@ -1625,6 +1625,11 @@ p {
     color: var(--green-deep);
   }
 
+  .mobile-bottom-bar__text {
+    background: var(--green-deep);
+    color: var(--white);
+  }
+
   .mobile-bottom-bar__estimate {
     background: var(--pink);
     color: var(--white);
