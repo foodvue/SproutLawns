@@ -1,5 +1,13 @@
 {
   "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000" }
+      ]
+    }
+  ],
   "redirects": [
     {
       "source": "/lawn-care/",
