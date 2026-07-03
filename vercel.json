@@ -4,7 +4,10 @@
     {
       "source": "/images/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=2592000" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
       ]
     }
   ],
@@ -482,6 +485,21 @@
     {
       "source": "/blog/is-brown-your-new-green-3-reasons-your-lawn-is-turning-brown/",
       "destination": "/blog/what-causes-brown-patches-in-your-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/:year(\\d{4})/:month(\\d{2})/",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/:year(\\d{4})/",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/tag/:path*",
+      "destination": "/blog/",
       "statusCode": 301
     }
   ]
