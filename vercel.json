@@ -193,8 +193,8 @@
       "statusCode": 301
     },
     {
-      "source": "/areas-served/:path*",
-      "destination": "/locations/:path*",
+      "source": "/areas-served/:path(.*)",
+      "destination": "/locations/:path(.*)",
       "statusCode": 301
     },
     {
@@ -238,7 +238,7 @@
       "statusCode": 301
     },
     {
-      "source": "/wp-admin/:path*",
+      "source": "/wp-admin/:path(.*)",
       "destination": "/",
       "statusCode": 301
     },
@@ -248,7 +248,7 @@
       "statusCode": 301
     },
     {
-      "source": "/wp-content/:path*",
+      "source": "/wp-content/:path(.*)",
       "destination": "/",
       "statusCode": 301
     },
@@ -428,17 +428,17 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/category/:path*",
+      "source": "/blog/category/:path(.*)",
       "destination": "/blog/",
       "statusCode": 301
     },
     {
-      "source": "/blog/author/:path*",
+      "source": "/blog/author/:path(.*)",
       "destination": "/blog/",
       "statusCode": 301
     },
     {
-      "source": "/blog/page/:path*",
+      "source": "/blog/page/:path(.*)",
       "destination": "/blog/",
       "statusCode": 301
     },
@@ -498,7 +498,7 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/tag/:path*",
+      "source": "/blog/tag/:path(.*)",
       "destination": "/blog/",
       "statusCode": 301
     }
