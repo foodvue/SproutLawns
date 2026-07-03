@@ -194,7 +194,7 @@
     },
     {
       "source": "/areas-served/:path(.*)",
-      "destination": "/locations/:path(.*)",
+      "destination": "/locations/:path",
       "statusCode": 301
     },
     {
