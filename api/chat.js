@@ -20,7 +20,7 @@ const SYSTEM_PROMPT = fs.readFileSync(
 );
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-const MODEL = 'claude-haiku-4-5';
+const MODEL = 'claude-haiku-4-5-20251001';
 const MAX_TOKENS = 500; // Keep responses tight (chatbot, not essay generator)
 const MAX_HISTORY = 20; // Cap conversation history to prevent runaway costs
 
