@@ -102,8 +102,7 @@ module.exports = async function handler(req, res) {
       const errorBody = await apiResponse.text();
       console.error('Anthropic API error:', apiResponse.status, errorBody);
       return res.status(500).json({
-        error: "Sorry, I'm having trouble responding right now. Please try again, or call us at (317) 900-7151.",
-        _debug: { status: apiResponse.status, body: errorBody.slice(0, 500) }
+        error: "Sorry, I'm having trouble responding right now. Please try again, or call us at (317) 900-7151."
       });
     }
 
