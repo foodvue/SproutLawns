@@ -49,8 +49,8 @@
   --container-narrow: 900px;
   --container-wide: 1400px;
   --nav-height: 80px;
-  --radius: 6px;
-  --radius-lg: 12px;
+  --radius: 10px;
+  --radius-lg: 18px;
 
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
@@ -133,7 +133,7 @@ p {
   font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--pink);
   margin-bottom: 0.75rem;
