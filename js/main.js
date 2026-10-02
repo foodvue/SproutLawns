@@ -264,12 +264,8 @@
   function initPhoneConversion() {
     document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
       link.addEventListener('click', function () {
-        // Google Ads conversion
-        if (typeof gtag === 'function') {
-          gtag('event', 'conversion', {
-            send_to: 'AW-748853640/d7frCOLwq7caEIiziuUC'
-          });
-        }
+        // Google Ads phone conversions are counted by the call-tracking
+        // forwarding number (phone_conversion_number config), not by clicks.
 
         // Facebook
         if (typeof fbq === 'function') {
@@ -362,10 +358,8 @@
     .then(function() {
       document.getElementById('quote-form-wrapper').style.display = 'none';
       document.getElementById('quote-form-success').style.display = '';
+      // The Google Ads "Submit lead form" conversion counts visits to /thank-you/
       if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          send_to: 'AW-748853640/d7frCOLwq7caEIiziuUC'
-        });
         gtag('event', 'generate_lead', {
           event_category: 'form',
           event_label: 'quote_request'
@@ -377,6 +371,10 @@
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
       }
+      // Short delay so the tracking requests above go out before the page changes
+      setTimeout(function () {
+        window.location.href = '/thank-you/';
+      }, 800);
     })
     .catch(function() {
       btn.textContent = 'Submit Request';
@@ -435,12 +433,6 @@
     // Listen for Jobber form submission postMessage
     if (event.data && (event.data.type === 'jobber_form_submitted' ||
         (typeof event.data === 'string' && event.data.indexOf('jobber') > -1))) {
-      // Google Ads
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          send_to: 'AW-748853640/d7frCOLwq7caEIiziuUC'
-        });
-      }
       // Facebook
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
