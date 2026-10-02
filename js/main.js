@@ -28,6 +28,8 @@
 
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
+  // Expose globally so page scripts (quote form) can fire events
+  window.gtag = gtag;
   gtag('js', new Date());
   gtag('config', 'AW-748853640');
   gtag('config', 'G-NJG1G7FM07');
@@ -72,6 +74,8 @@
     initStickyNav();
     initPhoneConversion();
     initPhoneClickTracking();
+    initTextClickTracking();
+    initQuoteForm();
     loadChatbot();
   });
 
@@ -279,6 +283,108 @@
       });
     });
   }
+
+  /* ==========================================================
+     TEXT (SMS) CLICK TRACKING
+     ========================================================== */
+  function initTextClickTracking() {
+    document.querySelectorAll('a[href^="sms:"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'sms_click', {
+            event_category: 'engagement',
+            event_label: link.href.replace('sms:', '')
+          });
+        }
+        if (typeof fbq === 'function') {
+          fbq('track', 'Contact');
+        }
+        if (typeof window.uetq !== 'undefined') {
+          window.uetq.push('event', 'sms_click', {});
+        }
+      });
+    });
+  }
+
+  /* ==========================================================
+     QUOTE FORM
+     Shared by /instant-estimate/ and /contact/
+     ========================================================== */
+  function initQuoteForm() {
+    var message = document.getElementById('message');
+    var count = document.getElementById('char-count');
+    if (!message || !count) return;
+    message.addEventListener('input', function () {
+      count.textContent = message.value.length + ' / 500';
+    });
+  }
+
+  window.submitQuoteForm = function () {
+    var firstName = document.getElementById('firstName').value.trim();
+    var lastName = document.getElementById('lastName').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var street = document.getElementById('street').value.trim();
+    var city = document.getElementById('city').value;
+    var state = document.getElementById('state').value;
+    var zip = document.getElementById('zip').value.trim();
+    var checked = document.querySelectorAll('input[name="services"]:checked');
+    var services = [];
+    checked.forEach(function(cb) { services.push(cb.value); });
+    var service = services.join(', ');
+    var message = document.getElementById('message').value.trim();
+
+    if (!firstName || !lastName || !email || !phone || !street || !city || !zip || services.length === 0) {
+      alert('Please fill out all required fields and select at least one service.');
+      return;
+    }
+
+    var btn = document.getElementById('quote-submit-btn');
+    btn.textContent = 'Sending...';
+    btn.style.opacity = '0.7';
+    btn.style.pointerEvents = 'none';
+
+    fetch('https://hooks.zapier.com/hooks/catch/27072165/unp91mr/', {
+      method: 'POST',
+      body: JSON.stringify({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        street: street,
+        city: city,
+        state: state,
+        zip: zip,
+        service: service,
+        message: 'SERVICES REQUESTED:\n- ' + services.join('\n- ') + '\n\nDETAILS:\n' + (message || 'No additional details provided.')
+      })
+    })
+    .then(function() {
+      document.getElementById('quote-form-wrapper').style.display = 'none';
+      document.getElementById('quote-form-success').style.display = '';
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          send_to: 'AW-748853640/d7frCOLwq7caEIiziuUC'
+        });
+        gtag('event', 'generate_lead', {
+          event_category: 'form',
+          event_label: 'quote_request'
+        });
+      }
+      if (typeof window.uetq !== 'undefined') {
+        window.uetq.push('event', 'form_submission', {});
+      }
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+    })
+    .catch(function() {
+      btn.textContent = 'Submit Request';
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = '';
+      alert('Something went wrong. Please try again or call us at (317) 900-7151.');
+    });
+  };
 
   /* ==========================================================
      GA4 PHONE CLICK TRACKING
