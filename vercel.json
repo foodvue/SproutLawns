@@ -621,6 +621,11 @@
       "source": "/blog/4-reasons-your-lawn-needs-aeration-overseeding/",
       "destination": "/blog/what-is-core-aeration-and-why-does-your-lawn-need-it/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/have-your-lawn-aerated-this-fall-to-help-it-reach-its-full-potential/",
+      "destination": "/blog/when-to-aerate-your-lawn-in-indiana/",
+      "statusCode": 301
     }
   ]
 }
