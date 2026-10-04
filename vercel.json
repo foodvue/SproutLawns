@@ -501,6 +501,126 @@
       "source": "/blog/tag/:path(.*)",
       "destination": "/blog/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/oh-deer-keeping-a-beautiful-landscape-that-is-deer-resistant/",
+      "destination": "/blog/how-to-keep-deer-out-of-your-landscape/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/why-your-lawn-needs-fertilizer/",
+      "destination": "/services/fertilization-weed-control/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/why-its-time-to-schedule-a-spring-yard-cleanup/",
+      "destination": "/blog/what-does-a-spring-cleanup-actually-include/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/what-are-good-annual-flowers-to-plant-in-the-fall-in-indiana/",
+      "destination": "/services/annual-flowers-seasonal-color/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/afraid-to-prune-dont-be-read-our-when-to-prune-guide-name/",
+      "destination": "/blog/when-to-trim-and-prune-shrubs-in-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/3-of-the-most-painstaking-weeds-we-deal-with-in-indiana/",
+      "destination": "/blog/hamilton-county-weed-identification-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/3-critical-questions-to-ask-when-hiring-lawn-service-in-indiana/",
+      "destination": "/blog/what-to-look-for-when-hiring-a-lawn-care-company/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/4-ways-you-are-attracting-mosquitoes-to-your-property/",
+      "destination": "/blog/mosquitoes-in-hamilton-county-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/why-your-yard-needs-weed-control/",
+      "destination": "/services/fertilization-weed-control/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/make-sure-you-keep-a-close-eye-on-your-pets-during-tick-season-in-indiana/",
+      "destination": "/blog/how-often-should-i-be-treating-my-lawn-for-fleas-ticks-in-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/add-a-ground-cover-to-your-landscape-beds-your-plants-will-thank-you/",
+      "destination": "/blog/best-low-maintenance-plants-for-indiana-landscape-beds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/is-rock-or-mulch-better-for-landscaping/",
+      "destination": "/blog/mulch-vs-rock-which-is-better/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/5-native-plants-for-a-low-maintenance-landscape/",
+      "destination": "/blog/best-low-maintenance-plants-for-indiana-landscape-beds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/do-i-need-to-hire-a-professional-for-fall-aeration-overseeding/",
+      "destination": "/blog/when-to-aerate-your-lawn-in-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/3-bare-necessity-tasks-for-spring-lawn-landscape-care/",
+      "destination": "/blog/spring-lawn-care-checklist-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-keep-your-annual-flowers-blooming-all-season/",
+      "destination": "/services/annual-flowers-seasonal-color/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/your-leaf-piles-are-attracting-unwanted-pests-to-your-property/",
+      "destination": "/blog/fall-leaf-removal-how-often-should-you-clean-your-yard/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/schedule-a-preventative-treatment-dont-worry-about-grubs-this-year/",
+      "destination": "/services/grub-control/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/soil-test-fertilization-the-science-behind-lawn-growth/",
+      "destination": "/blog/does-it-matter-how-much-fertilizer-you-use-for-your-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/pet-friendly-landscape-plants-you-should-know-about-in-carmel-in/",
+      "destination": "/blog/is-your-lawn-safe-for-dogs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/a-low-maintenance-stunning-landscape-doesnt-have-to-be-an-oxymoron/",
+      "destination": "/blog/best-low-maintenance-plants-for-indiana-landscape-beds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/the-importance-of-establishing-a-lawn-mowing-routine/",
+      "destination": "/blog/how-often-should-you-be-mowing-your-lawn-in-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/what-is-overseeding-when-should-it-be-performed/",
+      "destination": "/blog/how-overseeding-transforms-a-thin-lawn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/4-reasons-your-lawn-needs-aeration-overseeding/",
+      "destination": "/blog/what-is-core-aeration-and-why-does-your-lawn-need-it/",
+      "statusCode": 301
     }
   ]
 }
