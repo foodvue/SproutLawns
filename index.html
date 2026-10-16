@@ -24,7 +24,7 @@
   <!-- Shared CSS -->
   <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=20261016">
+  <link rel="stylesheet" href="/css/main.css?v=20261016b">
   <link rel="preload" as="image" href="/images/hero-striped-lawn-v2-mobile.webp" media="(max-width: 767px)" fetchpriority="high">
   <link rel="preload" as="image" href="/images/hero-striped-lawn-v2-1920.webp" media="(min-width: 768px)" fetchpriority="high">
 
@@ -361,7 +361,7 @@
 
         </div>
         <!-- Dots -->
-        <div id="testimonial-dots" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: var(--space-md);"></div>
+        <div id="testimonial-dots" style="display: flex; justify-content: center; gap: 0.25rem; margin-top: var(--space-md);"></div>
       </div>
       <div class="text-center" style="margin-top: var(--space-md);">
         <a href="/reviews/" class="btn btn--green">Read All Reviews</a>
@@ -477,7 +477,7 @@
           <p><a href="tel:317-900-7151" style="color: var(--white); font-weight: 700; text-decoration: none;">(317) 900-7151</a></p>
         </div>
         <div>
-          <h4 class="footer__heading">Services</h4>
+          <h3 class="footer__heading">Services</h3>
           <div class="footer__links">
             <a href="/services/lawn-mowing/">Lawn Mowing</a>
             <a href="/services/fertilization-weed-control/">Fertilization & Weed Control</a>
@@ -490,7 +490,7 @@
           </div>
         </div>
         <div>
-          <h4 class="footer__heading">Areas Served</h4>
+          <h3 class="footer__heading">Areas Served</h3>
           <div class="footer__links">
             <a href="/locations/noblesville/">Noblesville</a>
             <a href="/locations/carmel/">Carmel</a>
@@ -502,7 +502,7 @@
           </div>
         </div>
         <div>
-          <h4 class="footer__heading">Company</h4>
+          <h3 class="footer__heading">Company</h3>
           <div class="footer__links">
             <a href="/about/">About Us</a>
             <a href="/blog/">Blog</a>
@@ -540,7 +540,7 @@
     // Build dots
     for(var i=0;i<total;i++){
       var dot=document.createElement('button');
-      dot.style.cssText='width:10px;height:10px;border-radius:50%;border:none;cursor:pointer;transition:background 0.3s;background:'+(i===0?'var(--green-deep)':'var(--border)');
+      dot.style.cssText='width:24px;height:24px;padding:7px;background-clip:content-box;border-radius:50%;border:none;cursor:pointer;transition:background 0.3s;background:'+(i===0?'var(--green-deep)':'var(--border)');
       dot.setAttribute('aria-label','Review '+(i+1));
       dot.dataset.index=i;
       dot.addEventListener('click',function(){goTo(parseInt(this.dataset.index));startTimer();});

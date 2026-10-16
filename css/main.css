@@ -33,7 +33,7 @@
   --ink: #1a1a1a;
   --ink-light: #3d3d3d;
   --ink-muted: #6b6b6b;
-  --ink-faint: #9a9a9a;
+  --ink-faint: #707070;
   --border: #e0ddd8;
 
   /* Typography */
@@ -139,7 +139,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--pink);
+  color: #c42d75; /* slightly deeper than --pink for 4.5:1 contrast on cream */
   margin-bottom: 0.75rem;
   display: block;
 }
