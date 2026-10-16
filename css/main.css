@@ -1,3 +1,7 @@
+/* Self-hosted fonts (latin subset, variable weight) */
+@font-face { font-family: 'Outfit'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/outfit-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600 700; font-display: swap; src: url('/fonts/cormorant-garamond-latin.woff2') format('woff2'); }
+
 /* ============================================================
    SPROUT LAWN & LANDSCAPE — Design System
    main.css — shared across every page

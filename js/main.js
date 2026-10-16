@@ -47,18 +47,6 @@
   i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script",
   "//bat.bing.com/bat.js","uetq");
 
-  // --- WhatConverts ---
-  var wcScript = document.createElement('script');
-  wcScript.async = true;
-  wcScript.src = 'https://scripts.iconnode.com/110875.js';
-  document.head.appendChild(wcScript);
-
-  // --- Hotjar: 5104239 ---
-  (function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-  h._hjSettings={hjid:5104239,hjsv:6};a=o.getElementsByTagName('head')[0];
-  r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-  a.appendChild(r)})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-
   // --- Google reCAPTCHA (loaded on demand, not globally) ---
   // Site key: 6LfcmCcrAAAAADwBIdiHUT6IMhEteGBFYf9Pp8uY
   // Only loaded on pages with forms — see loadRecaptcha()
@@ -88,7 +76,7 @@
     if (document.getElementById('sprout-chatbot-script')) return;
     var s = document.createElement('script');
     s.id = 'sprout-chatbot-script';
-    s.src = '/js/chatbot.js';
+    s.src = '/js/chatbot.js?v=20261016';
     s.async = true;
     document.body.appendChild(s);
   }
