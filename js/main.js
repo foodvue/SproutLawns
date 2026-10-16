@@ -8,24 +8,24 @@
 
   /* ==========================================================
      TRACKING PIXELS & ANALYTICS
-     All codes carried over from WordPress site
+     The queues (fbq, gtag/dataLayer, uetq) are set up right away so no
+     event is lost. The vendor scripts themselves load after the page has
+     rendered, so they don't delay the first paint.
      ========================================================== */
 
   // --- Facebook Pixel (active ad account): 1366652494845892 ---
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  (function (f) {
+    if (f.fbq) return;
+    var n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+  })(window);
   fbq('init', '1366652494845892');
   fbq('track', 'PageView');
 
-  // --- Google Ads: AW-748853640 ---
-  var gtagScript = document.createElement('script');
-  gtagScript.async = true;
-  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-748853640';
-  document.head.appendChild(gtagScript);
-
+  // --- Google Ads AW-748853640 + GA4 G-NJG1G7FM07 ---
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
   // Expose globally so page scripts (quote form) can fire events
@@ -40,12 +40,38 @@
   });
 
   // --- Bing UET: 15247889 ---
-  (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"15247889",
-  enableAutoSpaTracking:true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},
-  n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){
-  var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},
-  i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script",
-  "//bat.bing.com/bat.js","uetq");
+  window.uetq = window.uetq || [];
+
+  function loadScript(src, onload) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = src;
+    if (onload) s.onload = onload;
+    document.head.appendChild(s);
+  }
+
+  function loadTrackers() {
+    if (window.__sproutTrackersLoaded) return;
+    window.__sproutTrackersLoaded = true;
+    loadScript('https://connect.facebook.net/en_US/fbevents.js');
+    loadScript('https://www.googletagmanager.com/gtag/js?id=AW-748853640');
+    loadScript('https://bat.bing.com/bat.js', function () {
+      var o = { ti: '15247889', enableAutoSpaTracking: true };
+      o.q = window.uetq;
+      window.uetq = new UET(o);
+      window.uetq.push('pageLoad');
+    });
+  }
+
+  // Load after the page renders: on the load event, or sooner if the visitor interacts.
+  if (document.readyState === 'complete') {
+    setTimeout(loadTrackers, 0);
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadTrackers, 0); });
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+    window.addEventListener(evt, loadTrackers, { once: true, passive: true });
+  });
 
   // --- Google reCAPTCHA (loaded on demand, not globally) ---
   // Site key: 6LfcmCcrAAAAADwBIdiHUT6IMhEteGBFYf9Pp8uY
