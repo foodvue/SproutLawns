@@ -13,6 +13,16 @@
   ],
   "redirects": [
     {
+      "source": "/blog/what-is-core-aeration-and-why-does-your-lawn-need-it/",
+      "destination": "/blog/when-to-aerate-your-lawn-in-indiana/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/why-commercial-properties-need-year-round-grounds-maintenance/",
+      "destination": "/services/commercial-grounds-maintenance/",
+      "statusCode": 301
+    },
+    {
       "source": "/lawn-care/",
       "destination": "/services/lawn-care/",
       "statusCode": 301
@@ -354,7 +364,7 @@
     },
     {
       "source": "/blog/what-is-aeration/",
-      "destination": "/blog/what-is-core-aeration-and-why-does-your-lawn-need-it/",
+      "destination": "/blog/when-to-aerate-your-lawn-in-indiana/",
       "statusCode": 301
     },
     {
@@ -619,7 +629,7 @@
     },
     {
       "source": "/blog/4-reasons-your-lawn-needs-aeration-overseeding/",
-      "destination": "/blog/what-is-core-aeration-and-why-does-your-lawn-need-it/",
+      "destination": "/blog/when-to-aerate-your-lawn-in-indiana/",
       "statusCode": 301
     },
     {
