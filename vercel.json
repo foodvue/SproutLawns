@@ -40,6 +40,11 @@
   ],
   "redirects": [
     {
+      "source": "/blog/4-lawn-diseases-that-can-invade-lawns-in-fishers-in/",
+      "destination": "/services/lawn-disease-control/",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/what-is-core-aeration-and-why-does-your-lawn-need-it/",
       "destination": "/blog/when-to-aerate-your-lawn-in-indiana/",
       "statusCode": 301
@@ -316,7 +321,7 @@
     },
     {
       "source": "/blog/dollar-spot-lawn-disease/",
-      "destination": "/blog/4-lawn-diseases-that-can-invade-lawns-in-fishers-in/",
+      "destination": "/services/lawn-disease-control/",
       "statusCode": 301
     },
     {
@@ -396,7 +401,7 @@
     },
     {
       "source": "/blog/3-lawn-diseases-you-need-to-watch-out-for-in-noblesville/",
-      "destination": "/blog/4-lawn-diseases-that-can-invade-lawns-in-fishers-in/",
+      "destination": "/services/lawn-disease-control/",
       "statusCode": 301
     },
     {
@@ -431,7 +436,7 @@
     },
     {
       "source": "/blog/dollar-spot-what-is-this-lawn-disease-can-it-be-cured/",
-      "destination": "/blog/4-lawn-diseases-that-can-invade-lawns-in-fishers-in/",
+      "destination": "/services/lawn-disease-control/",
       "statusCode": 301
     },
     {
