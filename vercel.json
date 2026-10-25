@@ -565,11 +565,6 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/what-are-good-annual-flowers-to-plant-in-the-fall-in-indiana/",
-      "destination": "/services/annual-flowers-seasonal-color/",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/afraid-to-prune-dont-be-read-our-when-to-prune-guide-name/",
       "destination": "/blog/when-to-trim-and-prune-shrubs-in-indiana/",
       "statusCode": 301
