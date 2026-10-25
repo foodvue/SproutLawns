@@ -40,6 +40,11 @@
   ],
   "redirects": [
     {
+      "source": "/blog/the-best-time-to-schedule-snow-removal-service-in-indiana/",
+      "destination": "/blog/snow-removal-tips-for-indiana-commercial-properties/",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/4-lawn-diseases-that-can-invade-lawns-in-fishers-in/",
       "destination": "/services/lawn-disease-control/",
       "statusCode": 301
