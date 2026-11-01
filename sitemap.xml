@@ -140,7 +140,7 @@
   </url>
   <url>
     <loc>https://www.sproutlawns.com/services/snow-removal/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -488,7 +488,7 @@
   </url>
   <url>
     <loc>https://www.sproutlawns.com/blog/what-causes-brown-patches-in-your-lawn/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -711,6 +711,12 @@
   <url>
     <loc>https://www.sproutlawns.com/blog/what-are-good-annual-flowers-to-plant-in-the-fall-in-indiana/</loc>
     <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.sproutlawns.com/blog/dormant-seeding-in-indiana/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
