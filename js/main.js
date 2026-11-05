@@ -416,6 +416,30 @@
   }
 
   /* ==========================================================
+     GA4 DEEPLAWN WIDGET TRACKING
+     The DeepLawn instant estimate runs in a cross-origin iframe,
+     so its submissions can't be seen. When the page loses focus to
+     that iframe, the visitor has clicked into the widget: count it
+     once per page view as estimate_started.
+     ========================================================== */
+  (function () {
+    var sent = false;
+    window.addEventListener('blur', function () {
+      setTimeout(function () {
+        var el = document.activeElement;
+        if (sent || !el || el.tagName !== 'IFRAME' || el.src.indexOf('deeplawn.com') === -1) return;
+        sent = true;
+        if (typeof gtag === 'function') {
+          gtag('event', 'estimate_started', {
+            event_category: 'engagement',
+            event_label: 'deeplawn_widget'
+          });
+        }
+      }, 0);
+    });
+  })();
+
+  /* ==========================================================
      UTILITY: Load reCAPTCHA on form pages
      Call this function on pages that have Jobber forms
      ========================================================== */
