@@ -17,9 +17,12 @@
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="/images/banner-maintained-lawn.webp" fetchpriority="high">
   <link rel="stylesheet" href="/css/main.css?v=20261016b">
   <style>
+    .hero--compact { min-height: 0; padding: var(--space-md) 0; }
+    .hero--compact .hero__content { padding: 0; }
+    .hero--compact h1 { margin-bottom: 0; font-size: clamp(1.6rem, 4vw, 2.25rem); }
+    .hero--compact + .section { padding-top: var(--space-lg); }
     @media (max-width: 480px) {
       .address-row { grid-template-columns: 1fr 1fr !important; }
       .address-row > div:first-child { grid-column: 1 / -1; }
@@ -98,9 +101,7 @@
   <div class="side-tab"><a href="/instant-estimate/">Get My Price</a></div>
 
   <!-- HERO -->
-  <section class="hero hero--interior">
-    <div class="hero__bg"><img src="/images/banner-maintained-lawn.webp" fetchpriority="high" alt="Well-maintained residential lawn in Hamilton County" width="1920" height="1080"></div>
-    <div class="hero__overlay"></div>
+  <section class="hero hero--interior hero--compact">
     <div class="container hero__content">
       <h1>Get My Price</h1>
     </div>

@@ -24,6 +24,22 @@ const MODEL = 'claude-haiku-4-5-20251001';
 const MAX_TOKENS = 500; // Keep responses tight (chatbot, not essay generator)
 const MAX_HISTORY = 20; // Cap conversation history to prevent runaway costs
 
+// Best-effort abuse guard. Memory is per warm instance, so this slows a
+// scripted flood rather than guaranteeing a hard cap.
+const ALLOWED_ORIGINS = ['https://www.sproutlawns.com', 'https://sproutlawns.com'];
+const RATE_WINDOW_MS = 5 * 60 * 1000;
+const RATE_MAX = 20; // requests per IP per window
+const hits = new Map();
+
+function rateLimited(ip) {
+  const now = Date.now();
+  if (hits.size > 5000) hits.clear();
+  const recent = (hits.get(ip) || []).filter(function (t) { return now - t < RATE_WINDOW_MS; });
+  recent.push(now);
+  hits.set(ip, recent);
+  return recent.length > RATE_MAX;
+}
+
 module.exports = async function handler(req, res) {
   // --- CORS (allows widget on www.sproutlawns.com to call this endpoint) ---
   res.setHeader('Access-Control-Allow-Origin', 'https://www.sproutlawns.com');
@@ -36,6 +52,18 @@ module.exports = async function handler(req, res) {
 
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  // --- Abuse guard: same-site requests only, capped per IP ---
+  const origin = req.headers.origin || '';
+  if (ALLOWED_ORIGINS.indexOf(origin) === -1) {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+  const ip = String(req.headers['x-forwarded-for'] || 'unknown').split(',')[0].trim();
+  if (rateLimited(ip)) {
+    return res.status(429).json({
+      error: "You've sent a lot of messages. Please call us at (317) 900-7151 and we'll help right away."
+    });
   }
 
   // --- Validate API key is configured ---
